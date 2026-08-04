@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>지원사업 증분 조사 보고서 — 여성·청년·AI·블록체인 창업자</title>
+<style>
+  :root{
+    --bg:#fafaf9; --card:#ffffff; --ink:#1c1917; --muted:#57534e;
+    --line:#e7e5e4; --accent:#0f766e; --accent-bg:#ccfbf1;
+    --a:#15803d; --a-bg:#dcfce7; --b:#b45309; --b-bg:#fef3c7;
+    --c:#9333ea; --c-bg:#f3e8ff; --warn:#b91c1c; --warn-bg:#fee2e2;
+    --code-bg:#f5f5f4;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo",
+      "Malgun Gothic",sans-serif; font-size:15px; line-height:1.7;
+    word-break:keep-all;
+  }
+  .wrap{max-width:880px; margin:0 auto; padding:32px 20px 80px;}
+  header.top{
+    background:linear-gradient(135deg,#0f766e,#0d9488); color:#fff;
+    padding:32px 24px; border-radius:14px; margin-bottom:28px;
+    box-shadow:0 6px 20px rgba(15,118,110,.18);
+  }
+  header.top h1{margin:0 0 6px; font-size:1.5rem; line-height:1.35;}
+  header.top .sub{opacity:.92; font-size:.92rem;}
+  .meta{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:10px; margin-top:18px;
+  }
+  .meta div{background:rgba(255,255,255,.13); padding:8px 12px; border-radius:8px; font-size:.85rem;}
+  .meta b{display:block; opacity:.8; font-weight:600; font-size:.78rem; margin-bottom:2px;}
+  section{
+    background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:22px 24px; margin-bottom:20px;
+  }
+  h2{
+    font-size:1.18rem; margin:0 0 14px; padding-bottom:10px;
+    border-bottom:2px solid var(--line); display:flex; align-items:center; gap:8px;
+  }
+  h2 .badge{
+    font-size:.7rem; font-weight:700; padding:3px 9px; border-radius:20px;
+    background:var(--accent-bg); color:var(--accent); white-space:nowrap;
+  }
+  h3{font-size:1.02rem; margin:22px 0 8px;}
+  h3 .tag{
+    font-size:.68rem; font-weight:700; padding:2px 8px; border-radius:6px;
+    margin-left:8px; vertical-align:middle;
+  }
+  h3 .tag.new{background:#fef9c3; color:#854d0e;}
+  h3 .tag.urgent{background:var(--warn-bg); color:var(--warn);}
+  p{margin:8px 0;}
+  ul{margin:8px 0; padding-left:22px;}
+  li{margin:4px 0;}
+  strong{color:var(--ink);}
+  code{
+    background:var(--code-bg); padding:1px 6px; border-radius:4px;
+    font-size:.85em; font-family:"SF Mono",Menlo,Consolas,monospace;
+  }
+  a{color:var(--accent); text-decoration:none; word-break:break-all;}
+  a:hover{text-decoration:underline;}
+  table{width:100%; border-collapse:collapse; margin:12px 0; font-size:.9rem;}
+  th,td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top;}
+  th{background:#f5f5f4; font-weight:700;}
+  tr:nth-child(even) td{background:#fcfcfc;}
+  .alert{
+    border-left:4px solid var(--accent); background:var(--accent-bg);
+    padding:12px 16px; border-radius:0 8px 8px 0; margin:14px 0; font-size:.92rem;
+  }
+  .verdict{
+    background:#f5f5f4; border-left:3px solid var(--muted);
+    padding:10px 14px; border-radius:0 6px 6px 0; margin:10px 0; font-size:.92rem;
+  }
+  .verdict b{color:var(--accent);}
+  .group-A > h2{border-bottom-color:var(--a);}
+  .group-A > h2 .badge{background:var(--a-bg); color:var(--a);}
+  .group-B > h2{border-bottom-color:var(--b);}
+  .group-B > h2 .badge{background:var(--b-bg); color:var(--b);}
+  .group-C > h2{border-bottom-color:var(--c);}
+  .group-C > h2 .badge{background:var(--c-bg); color:var(--c);}
+  .dday{
+    display:inline-block; background:var(--warn-bg); color:var(--warn);
+    font-weight:700; font-size:.78rem; padding:2px 8px; border-radius:6px; margin-left:6px;
+  }
+  details{margin:10px 0;}
+  summary{cursor:pointer; font-weight:600; color:var(--accent); padding:6px 0;}
+  details[open] summary{margin-bottom:6px;}
+  .footer-note{
+    text-align:center; color:var(--muted); font-size:.82rem;
+    margin-top:24px; padding-top:20px; border-top:1px solid var(--line);
+  }
+  @media (max-width:600px){
+    .wrap{padding:16px 12px 60px;}
+    header.top{padding:22px 18px;}
+    section{padding:16px;}
+    table{font-size:.82rem;}
+    th,td{padding:6px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>지원사업 증분 조사 보고서</h1>
+  <div class="sub">여성·청년·AI·블록체인 창업자 (지자체·부처 포털 확장)</div>
+  <div class="meta">
+    <div><b>조사일</b>2026-08-05 (직전 조사 +3h, 범위 확장)</div>
+    <div><b>프로필</b>개인사업자 / 서울(수도권 이전가능) / 여성·만37세(청년) / 아이템 선정중</div>
+    <div><b>범위 fingerprint</b><code>8697558e…2c5acb6</code> (직전 동일 → diff 유효)</div>
+    <div><b>직전 보고서</b>지원사업조사_여성블록체인AI창업자_20260805</div>
+  </div>
+</header>
+
+<div class="alert">
+  <b>이번 조사의 변화:</b> 자동 크롤 5개 소스 재수집(bizinfo·NIPA 범위 대폭 확대) +
+  <b>지자체·부처 포털(중소벤처24, 온통청년, 마포구청, 서울산업진흥원 SBA)</b>을 브라우저로 추가 수집.
+  프로필에 <b>청년(만37세)</b> 축을 신규 반영.
+</div>
+
+<section>
+  <h2>조사 개요 (커버리지) <span class="badge">데이터</span></h2>
+
+  <h3>자동 크롤 5개 소스</h3>
+  <table>
+    <thead><tr><th>소스</th><th>건수</th><th>상태</th><th>직전 대비</th></tr></thead>
+    <tbody>
+      <tr><td>K-Startup</td><td>204</td><td>✅ 전수 (exit 0)</td><td>동일</td></tr>
+      <tr><td>기업마당(bizinfo)</td><td>900</td><td>⚠️ partial (p60 캡)</td><td>450→900 (2배)</td></tr>
+      <tr><td>NIPA</td><td>364</td><td>✅ 전수 (exit 0)</td><td>300→364 (전수 달성)</td></tr>
+      <tr><td>KOCCA</td><td>10</td><td>✅ 전수</td><td>동일</td></tr>
+      <tr><td>SMTECH</td><td>58</td><td>✅ 전수</td><td>59→58 (2건 소멸)</td></tr>
+      <tr><td><b>합계</b></td><td><b>1,536</b></td><td colspan="2">1,023→1,536 (50% 증가)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>diff 결과 (직전 대비)</h3>
+  <ul>
+    <li><b>UNCHANGED 1,021건</b> — 직전 판정(A/B/C) 승계. 직전 A1~A5, B1~B4, C1~C4 유효.</li>
+    <li><b>NEW 515건</b> — 전수 검토 대상 (전부 bizinfo 누적분)</li>
+    <li><b>CHANGED 0건 / GONE 2건</b> (SMTECH 기술사업화패키지 — 직전 후보 아님)</li>
+    <li>모집중(apply_end ≥ 오늘): <b>450건 신규</b></li>
+  </ul>
+
+  <h3>지자체·부처 포털 (브라우저 수동)</h3>
+  <table>
+    <thead><tr><th>포털</th><th>수집 결과</th><th>비고</th></tr></thead>
+    <tbody>
+      <tr><td>중소벤처24<br><code>smes.go.kr</code></td><td>SPA/응답 불안정</td><td>공고 대부분 bizinfo·K-Startup 통합 게재 → 자동 소스로 실질 커버</td></tr>
+      <tr><td>온통청년(행안부)<br><code>youthcenter.go.kr</code></td><td>맞춤형검색(로그인)</td><td>크롤링 부적합. 청년 상시 프로그램(도약계좌 등)은 직접 신청</td></tr>
+      <tr><td>마포구청<br><code>mapo.go.kr</code></td><td>✅ 누락분 확보</td><td>마포청년나루, 청년상점 등 로컬 인프라</td></tr>
+      <tr><td>서울산업진흥원 SBA<br><code>sba.seoul.kr</code></td><td>공고 확인</td><td>대형 사업 마감. 접수처 = <b>스타트업플러스</b></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="group-A">
+  <h2>⭐ A그룹 — 지금 즉시 지원 가능 <span class="badge">신규+승계</span></h2>
+  <p>직전 A그룹(A1~A5)은 <b>UNCHANGED로 전부 유효</b>. 신규 A그룹:</p>
+
+  <h3>A6. 공공데이터 활용기업 AI연계 맞춤형 성장 지원사업 <span class="tag new">신규(재확인)</span></h3>
+  <ul>
+    <li><b>기관</b>: 행정안전부 / 한국지능정보사회진흥원(NIA)</li>
+    <li><b>마감</b>: <b>2026-08-14(금)</b><span class="dday">D-9</span></li>
+    <li><b>신청대상</b>: 공공데이터·AI 활용 서비스 (예정)기업 또는 <b>예비창업자</b> (사업자등록증 제출 면제) → <b>예비 명시 가능</b></li>
+    <li><b>지역</b>: 전국 (서울 포함)</li>
+    <li><b>지원내용</b>: 창업지원 / AI-Ready 구축 / AI서비스 고도화 / 투자유치·해외진출 (4대분류 12세부)</li>
+    <li><b>신청</b>: 이메일 opendatabiz@kmac.co.kr · <b>문의</b>: 070-4101-8055</li>
+    <li><b>URL</b>: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124359" target="_blank" rel="noopener">bizinfo 공고 보기</a></li>
+  </ul>
+  <div class="verdict"><b>💡 판정:</b> 직전 A4(동일 사업) 재확인. AI 아이템 + 공공데이터 결합 프레이밍. 자금 아닌 컨설팅 중심이나 <b>예비·전국·AI</b> 3조건 충족.</div>
+
+  <div class="alert">
+    <b>승계 안내:</b> 직전 A1(서울 AI 허브, 8/11), A2(AI 창업가 양성, 8/11), A3(여성 1인창조센터, 8/13), A5(서대문구 서울시립대, 8/23)는 <b>전부 여전히 모집중</b>이며 판정 승계.
+  </div>
+</section>
+
+<section class="group-B">
+  <h2>B그룹 — 요건 충족 시 열림 (로드맵) <span class="badge">신규</span></h2>
+
+  <h3>B5. 2차 프리팁스(Pre-TIPS) 창업기업 모집 <span class="tag urgent">⚡핵심 D-5</span></h3>
+  <ul>
+    <li><b>기관</b>: 중소벤처기업부 / 창업진흥원 (수행: 로우파트너스)</li>
+    <li><b>마감</b>: <b>2026-08-10(월)</b><span class="dday">D-5</span></li>
+    <li><b>지원내용</b>: <b>사업화 자금 평균 9천만원~최대 1억원</b> + 창업프로그램(시제품·마케팅·지재권·후속투자유치)</li>
+    <li><b>신청대상</b> (3개 트리거 <b>전부</b> 필요):
+      <ol>
+        <li><b>비수도권 소재</b> 창업기업</li>
+        <li>창업 <b>3년 이내</b></li>
+        <li>투자기관으로부터 <b>1천만원 이상 투자</b> 수령</li>
+      </ol>
+    </li>
+    <li><b>신청</b>: K-Startup 온라인 접수 · <b>문의</b>: 로우파트너스 042-862-9582 / 창업진흥원 044-410-1722</li>
+    <li><b>URL</b>: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124377" target="_blank" rel="noopener">bizinfo 공고 보기</a></li>
+  </ul>
+  <div class="verdict"><b>💡 판정:</b> 직전 보고서 "부재"에 있던 <b>프리팁스가 모집 시작</b>. 현재 서울+투자 없음 → 3개 트리거 전부 미충족(<b>로드맵</b>). 사업화 자금 1억원 규모 핵심 사업.<br>
+  <b>🔑 연쇄 트리거:</b> 시드투자(로우파트넼스 등 AC) → 비수도권(경기·인천) 법인 이전 → 프리팁스(1억) → TIPS(본사업, 최대 5억+인프라)</div>
+
+  <h3>B6. 성남시 청년창업 아이디에이션 4.0 (실리콘밸리 부트캠프)</h3>
+  <ul>
+    <li><b>기관</b>: 성남시청소년청년재단</li>
+    <li><b>마감</b>: <b>2026-08-13(목)</b><span class="dday">D-8</span></li>
+    <li><b>신청대상</b>: 혁신기술 기반 창업 희망 <b>성남시 거주·재학·재직 청년(만 19~39세)</b> (개인/3인 이하 팀)</li>
+    <li><b>지원내용</b>: 창업교육 + <b>미서부(실리콘밸리) 글로벌 부트캠프</b> + 현지기업 투어 (전 비용·체재비 지원)</li>
+    <li><b>신청</b>: 이메일 snboom@snyouth.or.kr (발송 후 유선 070-4908-2095 확인)</li>
+    <li><b>URL</b>: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124419" target="_blank" rel="noopener">bizinfo 공고 보기</a></li>
+  </ul>
+  <div class="verdict"><b>💡 판정:</b> 청년(만37세) 충족. <b>성남 거주/재학/재직</b> 요건 → 현재 마포 거주로 미충족. 성남 이전/재직 시 진입. AI·혁신기술 아이템에 최적.</div>
+
+  <h3>B7. SBA-신용보증기금 혁신 스타트업 보증지원 (참고, 마감)</h3>
+  <ul>
+    <li><b>기관</b>: 서울산업진흥원(SBA) / 신용보증기금 · <b>마감</b>: 2026-07-31 (종료, 차기 대기)</li>
+    <li><b>지원내용</b>: 운전자금 보증한도 <b>최대 40억원</b> (보증비율 100%, 0.7%p 고정보증료)</li>
+    <li><b>신청처</b>: <b>스타트업플러스(startup-plus.kr)</b> — SBA·서울시 창업사업 통합 접수처</li>
+  </ul>
+  <div class="verdict"><b>💡 판정:</b> 혁신성장산업(AI 포함) 대상이나 기창업 법인·투자연계 대상. 먼 로드맵. <b>접수처 스타트업플러스 기억 필수.</b></div>
+</section>
+
+<section class="group-C">
+  <h2>C그룹 — 변형(프레이밍)·지역 이전 시 가능 <span class="badge">신규</span></h2>
+
+  <h3>C5. 강원 제3회 여성 창업 아이디어 공모전 <span class="tag urgent">⚡D-4 임박</span></h3>
+  <ul>
+    <li><b>마감</b>: <b>2026-08-09</b><span class="dday">D-4</span></li>
+    <li><b>대상</b>: <b>강원 거주 여성(예비)창업자</b> (기창업 5년 이내 / 예비 개인·팀 가능)</li>
+    <li><b>지원</b>: 시상금 <b>300만원</b> / 공모분야 제한없음(ICT·SW·제조 전산업)</li>
+    <li><b>신청</b>: 구글폼 · <b>문의</b>: 강원경제진흥원 033-256-9226</li>
+    <li><b>URL</b>: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124496" target="_blank" rel="noopener">bizinfo 공고 보기</a></li>
+  </ul>
+  <div class="verdict"><b>💡 변형 각도:</b> 여성+예비+전산업(아이템 자유) — 프로필과 거의 완벽 일치하나 <b>강원 거주</b> 요건. 강원 연고·이전 시 즉시 A그룹.</div>
+
+  <h3>C6. 전남광주 G-IN Next Level 13기 <span class="tag urgent">⚡D-1 매우임박</span></h3>
+  <ul>
+    <li><b>마감</b>: <b>2026-08-06</b><span class="dday">D-1</span></li>
+    <li><b>대상</b>: <b>전남광주 본점 소재</b> 창업 7년 이내 (매출 20억 미만)</li>
+    <li><b>모집분야</b>: <b>인공지능(AI)</b> / 반도체 / 미래모빌리티 / 기후·에너지 / 바이오·헬스</li>
+    <li><b>문의</b>: 광주창조경제혁신센터 062-364-9162</li>
+    <li><b>URL</b>: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124242" target="_blank" rel="noopener">bizinfo 공고 보기</a></li>
+  </ul>
+  <div class="verdict"><b>💡 변형 각도:</b> AI 명시 모집분야. 전남광주 본점 요건 → 본점 이전 시 진입. 액셀러레이팅+투자연계.</div>
+
+  <h3>C7. 경기 반려동물 창업 공모전</h3>
+  <ul>
+    <li><b>마감</b>: 2026-08-24<span class="dday">D-19</span></li>
+    <li><b>URL</b>: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124128" target="_blank" rel="noopener">bizinfo 공고 보기</a></li>
+  </ul>
+  <div class="verdict"><b>💡 변형 각도:</b> AI 아이템을 "반려동물 테크(AI 펫케어·행동분석)"로 프레이밍. 경기도 대상. detail 미검증 — 거주/소재 요건 확인 필요.</div>
+</section>
+
+<section>
+  <h2>보조 — 지자체·진흥원 로컬 인프라 <span class="badge">자동소스 누락분</span></h2>
+
+  <h3>마포구 (거주지 연고)</h3>
+  <ul>
+    <li><b>마포청년창업취업지원센터 나루</b> (<a href="https://naroo.or.kr" target="_blank" rel="noopener">naroo.or.kr</a>) — 마포구 청년(만19~39세) 창업 핵심 기관
+      <ul>
+        <li><b>2026 1인창업가양성 과정</b>: 캐릭터창업 / 사진작가 / 독립출판 / 문화기획 (교육+멘토링)</li>
+        <li>창업교육: 스타트업 제안·영업전략, 창업가 세무·회계 (상시 프로그램)</li>
+      </ul>
+    </li>
+    <li><b>홍대 레드로드 청년상점</b> (1호점·2호점) — 점포 제공+멘토링 (월 22만원). 2026년 모집은 7/15 마감 → 차기 대기</li>
+    <li><b>마포출판문화진흥센터</b> (<a href="https://platform-p.org" target="_blank" rel="noopener">platform-p.org</a>) — 출판·콘텐츠 창업</li>
+    <li><b>마포 디자인·출판 특정개발진흥지구 공공임대 공간</b> 입주업체 모집 재공고 (마포구 고시공고)</li>
+  </ul>
+
+  <h3>서울시 공통</h3>
+  <ul>
+    <li><b>스타트업플러스</b> (<a href="https://www.startup-plus.kr" target="_blank" rel="noopener">startup-plus.kr</a>) — <b>SBA·서울시 창업사업 통합 접수처</b>. SBA 공고 다수가 여기서 접수. <b>북마크 필수</b>.</li>
+    <li><b>서울R&D지원센터</b> (<a href="https://seoul.rnbd.kr" target="_blank" rel="noopener">seoul.rnbd.kr</a>) — 테스트베드 서울 등 R&D 실증. 2차 마감, 3차 대기.</li>
+  </ul>
+
+  <h3>온통청년(행안부) 고유 상시 프로그램</h3>
+  <p>온통청년은 개별 공고 크롤링보다 <b>청년(만39세이하) 대상 상시 프로그램</b>을 직접 신청하는 것이 효율적:</p>
+  <ul>
+    <li><b>청년도약계좌</b> — 서류·소득 요건 충족 시 월 납입액 정부 매칭 적립 (최대 5천만원)</li>
+    <li><b>내일체험카드(내일키움통장)</b> — 직업훈련 + 수당</li>
+    <li>청년취업사관학교 (직전 A2와 연계)</li>
+    <li>URL: <a href="https://www.youthcenter.go.kr" target="_blank" rel="noopener">youthcenter.go.kr</a> (맞춤형 검색은 회원가입 후)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>부재(不在) 및 소멸 알림</h2>
+  <h3>직전 "부재" 중 이번에 모집 시작</h3>
+  <ul>
+    <li>✅ <b>프리팁스(Pre-TIPS) 2차</b> — 직전엔 모집중 아니었으나 <b>이번에 신규 모집 시작</b> (B5)</li>
+  </ul>
+  <h3>여전히 모집중 아닌 주요 사업 (차기 대기)</h3>
+  <ul>
+    <li><b>TIPS (본사업)</b> — AC 선정 선후. 프리팁스(B5) 후속 로드맵.</li>
+    <li><b>초기창업패키지 · 창업도약패키지</b> — 시즌별 모집.</li>
+    <li><b>예비창업패키지</b> — K-Startup 통합공고 상시 확인.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>🎯 우선순위 액션 목록 (갱신, 날짜별)</h2>
+  <table>
+    <thead><tr><th>기한</th><th>액션</th><th>출처</th></tr></thead>
+    <tbody>
+      <tr><td><b>오늘(8/5)</b></td><td>직전 보고서 액션(한성대 벤처센터 등) 확인</td><td>직전</td></tr>
+      <tr><td><b>8/6(목)</b></td><td>C6 G-IN Next(전남광주) — 본점 이전 감수 시 데모데이 지원</td><td>신규</td></tr>
+      <tr><td><b>8/9(수)</b></td><td>C5 강원 여성창업 공모전 — 강원 연고 시 시상금 300만원 즉시 신청</td><td>신규</td></tr>
+      <tr><td><b>8/10(월)</b></td><td><b>B5 프리팁스 마감</b> — 당장 불가하면 차기 대기. <b>로우파트넼스(042-862-9582) 시드투자 문의부터</b></td><td>신규·핵심</td></tr>
+      <tr><td><b>8/11(화)</b></td><td>직전 A1(서울AI허브) + A2(AI창업가양성) — <b>여전히 최우선</b></td><td>승계</td></tr>
+      <tr><td><b>8/13(목)</b></td><td>직전 A3(여성 1인창조센터) + B6 성남 청년창업 아이디에이션(성남 연고 시)</td><td>승계+신규</td></tr>
+      <tr><td><b>8/14(금)</b></td><td>A6 공공데이터 AI연계 — 국세완납증명서 미리 발급</td><td>재확인</td></tr>
+      <tr><td><b>8/23(일)</b></td><td>직전 A5 서대문구 서울시립대 — 주소 이전 감수 시</td><td>승계</td></tr>
+      <tr><td>상시</td><td><b>스타트업플러스(startup-plus.kr) 가입</b> + SBA 공고 알림</td><td>신규 인프라</td></tr>
+      <tr><td>상시</td><td><b>마포청년나루(naroo.or.kr)</b> 1인창업가양성 프로그램 신청 (거주지 연고)</td><td>신규 인프라</td></tr>
+    </tbody>
+  </table>
+
+  <div class="alert">
+    <b>권장 전략 (아이템 미정 단계):</b>
+    <ol style="margin:8px 0 0;">
+      <li><b>즉시</b>: A1+A2(서울 AI 허브+창업가 양성)로 아이템 구체화</li>
+      <li><b>병행</b>: 마포청년나루 교육프로그램으로 창업 기본역량 + 네트워킹 (로컬, 무료~저비용)</li>
+      <li><b>로드맵</b>: 아이템 확정 → 시드투자(로우파트넼스 등) → 비수도권 이전 → <b>프리팁스(B5, 1억)</b> → TIPS</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <h2>한계 고지</h2>
+  <ol>
+    <li><b>지자체·부처 포털 브라우저 수집 제한</b>: 중소벤처24·온통청년은 SPA/로그인 기반으로 자동 수집 불가. 다만 <b>공고는 대부분 bizinfo·K-Startup 통합 게재</b>되어 자동 소스로 실질 커버됨.</li>
+    <li><b>기업마당 partial (900건, p60 캡)</b>: 누적 공고 일부 누락 가능. 직전(450) 대비 2배 확대했으나 전수 아님.</li>
+    <li><b>상세 검증 범위</b>: 신규 515건 중 핵심 6건만 원문 상세 검증. 나머지는 제목·메타 1차 판정. 마감 임박(C5·C6)은 시급.</li>
+    <li><b>마포구 로컬 공고</b>: 나루 프로그램은 교육·멘토링(자금 아님). 청년상점·입주공간은 2026년 분 마감 → 차기 대기.</li>
+    <li><b>'예비창업자 가능'·지역 판정은 공고 텍스트 기준</b> — 특히 B5(비수도권), B6(성남 거주/재직)은 신청 전 접수기관 유선확인 권장.</li>
+    <li>마감 연장·조기마감 가능성 always 존재. 본 보고서 마감일은 2026-08-05 기준.</li>
+  </ol>
+</section>
+
+<div class="footer-note">
+  <b>부록 산출물:</b> new_items.jsonl (515건) · gone_new_items.jsonl (2건) · scope-plan.json · run_manifest.json · raw/ · details/ · attachments/<br>
+  직전 보고서: 지원사업조사_여성블록체인AI창업자_20260805 (UNCHANGED 1,021건 판정 근거)
+</div>
+
+</div>
+</body>
+</html>
