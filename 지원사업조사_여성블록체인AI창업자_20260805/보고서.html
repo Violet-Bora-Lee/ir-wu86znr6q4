@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>지원사업 조사 (증분) — 2026-08-05 2차</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --card:#fff; --ink:#1f2330; --ink2:#5a6275; --ink3:#8b93a7;
+    --line:#e6e8ee; --line2:#eef0f4;
+    --a:#1a73e8; --a-bg:#eaf2fe; --a-line:#c6dcfb;
+    --b:#d97706; --b-bg:#fdf3e3; --b-line:#f5d9a8;
+    --c:#6b7280; --c-bg:#f1f2f5; --c-line:#d8dbe2;
+    --danger:#dc2626; --danger-bg:#fdecec; --ok:#16a34a; --accent:#7c3aed;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.6}
+  .wrap{max-width:880px;margin:0 auto;padding:24px 18px 80px}
+
+  .hero{background:linear-gradient(135deg,#0f766e 0%,#1a73e8 100%);color:#fff;border-radius:18px;padding:28px 28px 24px;box-shadow:0 8px 30px rgba(15,118,110,.2)}
+  .hero .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.85;font-weight:600}
+  .hero h1{margin:8px 0 12px;font-size:23px;font-weight:800}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;opacity:.95}
+  .hero .meta b{font-weight:600}
+
+  .diff-banner{background:var(--card);border-radius:14px;padding:18px 20px;margin:18px 0;border:1px solid var(--line);border-left:5px solid var(--ok)}
+  .diff-banner .title{font-weight:800;font-size:16px;color:var(--ok);margin-bottom:6px}
+  .diff-banner .desc{font-size:14px;color:var(--ink2)}
+
+  section{margin-top:28px}
+  h2{font-size:19px;margin:0 0 14px;font-weight:800;display:flex;align-items:center;gap:9px}
+  h2 .badge{font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;background:var(--ink);color:#fff}
+  h3{font-size:15px;margin:16px 0 8px;font-weight:700;color:var(--ink2)}
+
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:14px}
+  .stat{background:var(--card);border-radius:12px;padding:14px;border:1px solid var(--line);text-align:center}
+  .stat .num{font-size:26px;font-weight:800;color:var(--ink)}
+  .stat .label{font-size:12px;color:var(--ink3);margin-top:2px}
+  .stat.zero .num{color:var(--ok)}
+  .stat.warn .num{color:var(--b)}
+
+  .card{background:var(--card);border-radius:14px;padding:16px 18px;margin-bottom:12px;border:1px solid var(--line);border-left-width:5px}
+  .card.a{border-left-color:var(--a)} .card.b{border-left-color:var(--b)} .card.c{border-left-color:var(--c)}
+  .card .row1{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .card .title{font-size:15.5px;font-weight:700;flex:1;min-width:200px}
+  .card .title a{color:inherit;text-decoration:none}
+  .dday{font-size:11.5px;font-weight:800;padding:4px 9px;border-radius:8px;white-space:nowrap;background:var(--danger-bg);color:var(--danger)}
+  .dday.urgent{animation:pulse 1.8s infinite}
+  .dday.normal{background:#eef0f4;color:var(--ink2)}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(220,38,38,.35)}50%{box-shadow:0 0 0 6px rgba(220,38,38,0)}}
+  .info{font-size:13.5px;color:var(--ink2);margin-top:8px}
+  .info b{color:var(--ink);font-weight:600}
+  .url{margin-top:6px;font-size:12px;color:var(--ink3);word-break:break-all}
+  .url a{color:var(--a);text-decoration:none}
+
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;font-size:13.5px;margin-top:10px}
+  th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--line2)}
+  thead th{background:#fafbfc;font-weight:700;color:var(--ink2);font-size:11.5px;text-transform:uppercase}
+  tbody tr:last-child td{border-bottom:none}
+  .stat-ok{color:var(--ok);font-weight:700}
+  .stat-partial{color:var(--b);font-weight:700}
+  .num{font-variant-numeric:tabular-nums;font-weight:700;text-align:right}
+
+  .timeline{position:relative;padding-left:24px}
+  .timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .tl-item{position:relative;padding:7px 0}
+  .tl-item::before{content:"";position:absolute;left:-21px;top:12px;width:11px;height:11px;border-radius:50%;background:var(--a);border:3px solid #fff;box-shadow:0 0 0 2px var(--a)}
+  .tl-item.urgent::before{background:var(--danger);box-shadow:0 0 0 2px var(--danger)}
+  .tl-date{font-weight:800;font-size:12.5px;color:var(--ink2)}
+  .tl-date.urgent{color:var(--danger)}
+  .tl-body{font-size:13.5px}
+
+  .callout{background:var(--card);border-radius:12px;padding:14px 16px;border:1px solid var(--line);margin-top:12px}
+  .callout.warn{background:#fff7ed;border-color:#fcd9b6}
+  ul.clean{margin:6px 0 0;padding-left:18px}
+  ul.clean li{margin:4px 0;font-size:13px}
+  footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--ink3)}
+  @media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)} .hero{padding:22px 18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="kicker">정기 조사 · 증분(diff) 보고서 · 2차</div>
+    <h1>여성·블록체인·AI 창업자 지원사업 조사</h1>
+    <div class="meta">
+      <span>📅 <b>2026-08-05</b> (같은 날 2차)</span>
+      <span>👤 개인사업자 · <b>여성 창업자</b></span>
+      <span>📍 서울</span>
+      <span>🔍 diff 모드 (직전 대비 변경분)</span>
+    </div>
+  </div>
+
+  <!-- DIFF 요약 -->
+  <div class="diff-banner">
+    <div class="title">✅ 실질 신규 공고 없음 — 직전 A그룹 전부 모집중 유지</div>
+    <div class="desc">같은 날 몇 시간 차이 조사라 변동 최소. 직전 <b>A1~A6 판정 그대로 유효</b>. 마감일 변동 없음. 상세는 <a href="../지원사업조사_여성블록체인AI창업자_20260805_0324/보고서.html" style="color:var(--a)">직전 보고서</a> 참조.</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat zero"><div class="num">0</div><div class="label">NEW (실질)</div></div>
+    <div class="stat zero"><div class="num">0</div><div class="label">CHANGED</div></div>
+    <div class="stat warn"><div class="num">514</div><div class="label">CLOSED (억제됨)</div></div>
+    <div class="stat"><div class="num">1,023</div><div class="label">수집 (건)</div></div>
+  </div>
+
+  <!-- A그룹 -->
+  <section>
+    <h2>⭐ A그룹 — 즉시 지원 가능 <span class="badge" style="background:var(--a)">직전 승계 · 마감임박</span></h2>
+
+    <h3>⚡ 이번 주 마감 (D-6 ~ D-9)</h3>
+
+    <div class="card a">
+      <div class="row1">
+        <div class="title">① 2026년 2차 <b>서울 AI 허브</b> 신규 입주기업</div>
+        <span class="dday urgent">D-6 · 8/11</span>
+      </div>
+      <div class="info">서울 서초구 · <b>예비창업자 가능</b> · 21개사 · 1~4년 · AX/GPU 클라우드 연계</div>
+      <div class="url"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178661" target="_blank">k-startup · pbancSn=178661</a></div>
+    </div>
+
+    <div class="card a">
+      <div class="row1">
+        <div class="title">② <b>AI 창업가 양성</b> (MVP 스프린트, 무료)</div>
+        <span class="dday urgent">D-6 · 8/11</span>
+      </div>
+      <div class="info">서울 마포구 · 예비창업가 · 8/18~10/06 · <b>아이템 선정에 최적</b></div>
+      <div class="url"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178669" target="_blank">k-startup · pbancSn=178669</a></div>
+    </div>
+
+    <div class="card a" style="border-left-color:#be185d">
+      <div class="row1">
+        <div class="title">③ <b>여성 1인 창조기업센터</b> 입주 ⭐ 1순위</div>
+        <span class="dday">D-8 · 8/13</span>
+      </div>
+      <div class="info">서울 강남구 · <b>6개월 이내 창업 가능한 여성(예비)</b> · 공간+사업화자금+멘토링 · 프로필 최적합</div>
+      <div class="url"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178643" target="_blank">k-startup · pbancSn=178643</a></div>
+    </div>
+
+    <div class="card a">
+      <div class="row1">
+        <div class="title">④ 공공데이터 활용기업 <b>AI연계</b> 맞춤형 성장</div>
+        <span class="dday">D-9 · 8/14</span>
+      </div>
+      <div class="info">전국 · 예비창업자 가능 · 맞춤형 컨설팅 (자금 아님)</div>
+      <div class="url"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178559" target="_blank">k-startup · pbancSn=178559</a></div>
+    </div>
+
+    <h3>여유 있음</h3>
+    <div class="card a">
+      <div class="row1">
+        <div class="title">⑤ 서대문구-<b>서울시립대</b> 창업지원센터</div>
+        <span class="dday normal">D-18 · 8/23</span>
+      </div>
+      <div class="info">서울 서대문구 · 예비/7년미만 · <b>여성창업자 우대</b> · 최장 5년 (주소 이전 필요)</div>
+      <div class="url"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178697" target="_blank">k-startup · pbancSn=178697</a></div>
+    </div>
+  </section>
+
+  <!-- B그룹 -->
+  <section>
+    <h2>🔧 B그룹 — 요건 충족 시 <span class="badge" style="background:var(--b)">직전 승계</span></h2>
+
+    <div class="card b">
+      <div class="row1">
+        <div class="title">[⚡핵심] 2026년 2차 <b>프리팁스(Pre-TIPS)</b> — 자금 1억원</div>
+        <span class="dday urgent">D-5 · 8/10</span>
+      </div>
+      <div class="info">사업화 자금 평균 9천만~1억원 · 3 트리거: ① 비수도권 ② 창업 3년 이내 ③ 1천만원+ 투자</div>
+      <div class="info" style="color:var(--accent)">🔑 연쇄: 시드투자 → 비수도권 법인 → <b>프리팁스(1억)</b> → TIPS(최대 5억+인프라)</div>
+      <div class="url"><a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124377" target="_blank">bizinfo · PBLN_…124377</a></div>
+    </div>
+
+    <div class="card b">
+      <div class="row1">
+        <div class="title">성남시 청년창업 <b>아이디에이션 4.0</b> (실리콘밸리)</div>
+        <span class="dday">D-8 · 8/13</span>
+      </div>
+      <div class="info">성남 거주·재학·재직 청년(만19~39) · 미서부 부트캠프 전 비용 지원</div>
+      <div class="url"><a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124419" target="_blank">bizinfo · PBLN_…124419</a></div>
+    </div>
+
+    <div class="card b">
+      <div class="row1"><div class="title">블록체인 API 자금 · 가상융합허브 · 모두의 AI · 인천 블록체인</div></div>
+      <div class="info">상세는 <a href="../지원사업조사_여성블록체인AI창업자_20260805_0324/보고서.html" style="color:var(--a)">직전 보고서 B그룹</a> 참조. 블록체인 API(8/10)는 KISA 유선(061-820-3935) 개인사업자 가능 확인 필요.</div>
+    </div>
+  </section>
+
+  <!-- C그룹 -->
+  <section>
+    <h2>🔄 C그룹 — 변형·이전 시 <span class="badge" style="background:var(--c)">직전 승계</span></h2>
+    <div class="card c">
+      <div class="row1">
+        <div class="title">[⚡] 강원 제3회 <b>여성 창업 아이디어 공모전</b></div>
+        <span class="dday urgent">D-4 · 8/9</span>
+      </div>
+      <div class="info">강원 거주 여성(예비)창업자 · 시상금 300만원 · 분야 제한 없음 · 여성 특화</div>
+    </div>
+    <div class="card c">
+      <div class="row1"><div class="title">대구 블록체인 · 제조AI 공모전 · 충북 SKT AI · Tri Nexus</div></div>
+      <div class="info">상세는 직전 보고서 C그룹 참조</div>
+    </div>
+  </section>
+
+  <!-- 커버리지 -->
+  <section>
+    <h2>📊 커버리지</h2>
+    <table>
+      <thead><tr><th>소스</th><th class="num">수집</th><th>상태</th><th>비고</th></tr></thead>
+      <tbody>
+        <tr><td>K-Startup</td><td class="num">204</td><td><span class="stat-ok">✓ 전수</span></td><td>exit 0</td></tr>
+        <tr><td>기업마당</td><td class="num">450</td><td><span class="stat-partial">⚠ partial</span></td><td>p30 캡</td></tr>
+        <tr><td>NIPA</td><td class="num">300</td><td><span class="stat-partial">⚠ partial</span></td><td>p30 캡</td></tr>
+        <tr><td>KOCCA</td><td class="num">10</td><td><span class="stat-ok">✓ 전수</span></td><td></td></tr>
+        <tr><td>SMTECH</td><td class="num">59</td><td><span class="stat-ok">✓ 전수</span></td><td></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 액션 -->
+  <section>
+    <h2>🎯 우선순위 액션 (마감순)</h2>
+    <div class="timeline">
+      <div class="tl-item urgent"><div class="tl-date urgent">8/9(일)</div><div class="tl-body">C5 강원 여성 공모전 (강원 연고 시)</div></div>
+      <div class="tl-item urgent"><div class="tl-date urgent">8/10(월)</div><div class="tl-body">B1 블록체인 API 자금 KISA 유선 · <b>B5 프리팁스</b> (3 트리거 확인)</div></div>
+      <div class="tl-item urgent"><div class="tl-date urgent">8/11(화)</div><div class="tl-body"><b>A1 서울 AI 허브</b> + <b>A2 AI 창업가 양성</b> 동시 신청</div></div>
+      <div class="tl-item"><div class="tl-date">8/13(목)</div><div class="tl-body"><b>A3 여성 1인창조센터 (1순위)</b> · B6 성남 아이디에이션</div></div>
+      <div class="tl-item"><div class="tl-date">8/14(금)</div><div class="tl-body">A4 공공데이터 AI연계 (국세완납증명서 미리 발급)</div></div>
+      <div class="tl-item"><div class="tl-date">8/23(일)</div><div class="tl-body">A5 서대문구 서울시립대</div></div>
+    </div>
+  </section>
+
+  <div class="callout warn">
+    <h3 style="margin:0 0 6px">⚠ 한계 고지</h3>
+    <ul class="clean">
+      <li><b>증분(diff) 모드</b>: 실질 NEW 0건. 직전 판정 승계. 직전 보고서 상세 검증이 그대로 유효.</li>
+      <li><b>bizinfo·NIPA partial</b>: 514건이 CLOSED SUPPRESSED — 소멸 단정 안 함. 다음 조사 시 <code>--max-pages</code> 확대 권장.</li>
+      <li><b>프리팁스(B5)</b>: 이번 크롤에 안 잡힘(partial 영향). 직전 판정 승계 — 신청 전 K-Startup 최종 확인 필수.</li>
+      <li>'예비창업자 가능'은 공고 텍스트 기준 — 신청 전 유선확인 권장.</li>
+    </ul>
+  </div>
+
+  <footer>
+    직전 보고서(상세): <a href="../지원사업조사_여성블록체인AI창업자_20260805_0324/보고서.html" style="color:var(--a)">2026-08-05 03:24</a><br>
+    원시 데이터: kstartup_all.jsonl · sources_all.jsonl · raw/ · new_items.jsonl (NEW 2건-둘 다 마감)<br>
+    scope_fingerprint: 8697558e... (직전과 동일) · 다음 정기 조사: 2026-08-06 08:00
+  </footer>
+
+</div>
+</body>
+</html>
