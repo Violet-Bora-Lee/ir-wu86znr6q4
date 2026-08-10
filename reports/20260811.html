@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#dc2626">
+<title>지원사업 조사 (8/11, A1/A2 마감 + NEW 로켓십)</title>
+<style>
+  :root{--bg:#f7f8fa;--card:#fff;--ink:#1f2330;--ink2:#5a6275;--ink3:#8b93a7;--line:#e6e8ee;--a:#1a73e8;--b:#d97706;--c:#6b7280;--danger:#dc2626;--danger-bg:#fdecec;--ok:#16a34a;--accent:#7c3aed;--new:#16a34a;--new-bg:#dcfce7;}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.6}
+  .wrap{max-width:880px;margin:0 auto;padding:24px 18px 80px}
+  .hero{background:linear-gradient(135deg,#dc2626 0%,#7c3aed 100%);color:#fff;border-radius:18px;padding:28px;box-shadow:0 8px 30px rgba(220,38,38,.25)}
+  .hero .kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.9;font-weight:600}
+  .hero h1{margin:8px 0 12px;font-size:22px;font-weight:800}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;opacity:.95}
+  .hero .meta b{font-weight:600}
+  .urgent-banner{background:var(--danger);color:#fff;border-radius:14px;padding:16px 18px;margin:16px 0;animation:gp 2s infinite}
+  @keyframes gp{0%,100%{box-shadow:0 0 0 0 rgba(220,38,38,.5)}50%{box-shadow:0 0 0 10px rgba(220,38,38,0)}}
+  .urgent-banner .t{font-weight:800;font-size:16px;margin-bottom:4px}
+  .urgent-banner .d{font-size:13px;opacity:.95}
+  .new-banner{background:var(--new);color:#fff;border-radius:14px;padding:16px 18px;margin:16px 0}
+  .new-banner .t{font-weight:800;font-size:16px;margin-bottom:4px}
+  .new-banner .d{font-size:13px;opacity:.95}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:10px;margin-bottom:14px}
+  .stat{background:var(--card);border-radius:12px;padding:12px;border:1px solid var(--line);text-align:center}
+  .stat .num{font-size:20px;font-weight:800}
+  .stat .label{font-size:11px;color:var(--ink3);margin-top:2px}
+  .stat.new .num{color:var(--new)} .stat.pass .num{color:var(--ok)} .stat.closed .num{color:var(--danger)} .stat.partial .num{color:var(--b)}
+  section{margin-top:24px}
+  h2{font-size:18px;margin:0 0 12px;font-weight:800;display:flex;align-items:center;gap:8px}
+  h2 .badge{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;color:#fff}
+  .card{background:var(--card);border-radius:13px;padding:15px 17px;margin-bottom:10px;border:1px solid var(--line);border-left-width:5px}
+  .card.a{border-left-color:var(--a)} .card.b{border-left-color:var(--b)} .card.c{border-left-color:var(--c)}
+  .card.new-item{box-shadow:0 0 0 2px var(--new) inset}
+  .card.closing{background:#fff5f5;border-color:#fecaca}
+  .card.closed-tag{opacity:.55;text-decoration:line-through}
+  .card .row1{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}
+  .card .title{font-size:15px;font-weight:700;flex:1;min-width:200px}
+  .card .title a{color:inherit;text-decoration:none}
+  .new-tag{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:5px;background:var(--new-bg);color:var(--new);white-space:nowrap}
+  .dday{font-size:11px;font-weight:800;padding:3px 8px;border-radius:7px;white-space:nowrap;background:var(--danger-bg);color:var(--danger)}
+  .dday.today{background:var(--danger);color:#fff;animation:gp 1.5s infinite}
+  .dday.normal{background:#eef0f4;color:var(--ink2)}
+  .info{font-size:13px;color:var(--ink2);margin-top:7px}
+  .info b{color:var(--ink);font-weight:600}
+  .url{margin-top:5px;font-size:11.5px;word-break:break-all}
+  .url a{color:var(--a);text-decoration:none}
+  .timeline{position:relative;padding-left:22px}
+  .timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .tl-item{position:relative;padding:6px 0}
+  .tl-item::before{content:"";position:absolute;left:-19px;top:11px;width:10px;height:10px;border-radius:50%;background:var(--a);border:3px solid #fff;box-shadow:0 0 0 2px var(--a)}
+  .tl-item.urgent::before{background:var(--danger);box-shadow:0 0 0 2px var(--danger)}
+  .tl-date{font-weight:800;font-size:12px;color:var(--ink2)}
+  .tl-date.urgent{color:var(--danger)}
+  .tl-body{font-size:13px}
+  .callout{background:var(--card);border-radius:12px;padding:14px 16px;border:1px solid var(--line);margin-top:12px}
+  .callout.warn{background:#fff7ed;border-color:#fcd9b6}
+  ul.clean{margin:6px 0 0;padding-left:18px}
+  ul.clean li{margin:4px 0;font-size:12.5px}
+  footer{margin-top:34px;padding-top:14px;border-top:1px solid var(--line);font-size:11.5px;color:var(--ink3)}
+  @media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}.hero{padding:22px 18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="kicker">정기 조사 · 증분 · ⚠ A1/A2 오늘 마감</div>
+    <h1>여성·블록체인·AI 창업자 지원사업 조사</h1>
+    <div class="meta">
+      <span>📅 <b>2026-08-11</b></span>
+      <span>👤 개인사업자 · <b>여성 창업자</b></span>
+      <span>📍 서울</span>
+      <span>🔍 diff (NEW 74 · CLOSED 12)</span>
+    </div>
+  </div>
+
+  <div class="urgent-banner">
+    <div class="t">⚡ 오늘(8/11) A1·A2 마감 — 서울 AI 허브 + AI 창업가 양성</div>
+    <div class="d">두 핵심 A그룹 공고가 오늘 마감. 서울+예비창업자 가능. 지금 바로 신청.</div>
+  </div>
+
+  <div class="new-banner">
+    <div class="t">🆕 NEW — 로켓십 IR 경진대회 (8/21) : 마감된 프리팁스의 대안</div>
+    <div class="d">초기창업패키지 로켓십 IR 경진대회로 시드투자 획득 → TIPS 로드맵 진입 가능. 어제 마감된 프리팁스(1억)를 놓쳤다면 새 진입경로.</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat new"><div class="num">74</div><div class="label">NEW</div></div>
+    <div class="stat closed"><div class="num">12</div><div class="label">CLOSED</div></div>
+    <div class="stat pass"><div class="num">✓</div><div class="label">게이트</div></div>
+    <div class="stat partial"><div class="num">1,047</div><div class="label">수집</div></div>
+  </div>
+
+  <!-- A그룹 -->
+  <section>
+    <h2>⭐ A그룹 — 즉시 지원 가능 <span class="badge" style="background:var(--a)">6건 · A1/A2 오늘 마감</span></h2>
+
+    <div class="card a closing">
+      <div class="row1"><div class="title">① 2026년 2차 <b>서울 AI 허브</b> 신규 입주</div><span class="dday today">오늘 마감</span></div>
+      <div class="info">서울 서초구 · <b>예비창업자 가능</b> · 21개사 · 1~4년 · AX/GPU 클라우드</div>
+      <div class="info" style="color:var(--danger);font-weight:600">🚨 <b>오늘 마감 — 지금 신청</b></div>
+      <div class="url"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178661" target="_blank">k-startup · 178661</a></div>
+    </div>
+    <div class="card a closing">
+      <div class="row1"><div class="title">② <b>AI 창업가 양성</b> (MVP 스프린트, 무료)</div><span class="dday today">오늘 마감</span></div>
+      <div class="info">서울 마포구 · 예비창업가 · 8/18~10/06 · <b>아이템 선정 최적</b></div>
+      <div class="info" style="color:var(--danger);font-weight:600">🚨 <b>오늘 마감 — 지금 신청</b></div>
+      <div class="url"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178669" target="_blank">k-startup · 178669</a></div>
+    </div>
+    <div class="card a" style="border-left-color:#be185d">
+      <div class="row1"><div class="title">③ <b>여성 1인 창조기업센터</b> ⭐ 1순위</div><span class="dday">D-2 · 8/13</span></div>
+      <div class="info">서울 강남구 · <b>6개월 이내 창업 가능한 여성(예비)</b> · 공간+자금+멘토링</div>
+      <div class="url"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178643" target="_blank">k-startup · 178643</a></div>
+    </div>
+    <div class="card a">
+      <div class="row1"><div class="title">서울 <b>IP디딤돌 IP창업존</b> 32기</div><span class="dday">D-3 · 8/14</span></div>
+      <div class="info"><b>서울 소재 예비/초기창업자</b> · 30명 · 8/24~27 무료교육</div>
+      <div class="url"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178793" target="_blank">k-startup · 178793</a></div>
+    </div>
+    <div class="card a">
+      <div class="row1"><div class="title">④ 공공데이터 <b>AI연계</b> 맞춤형 성장</div><span class="dday">D-3 · 8/14</span></div>
+      <div class="info">전국 · 예비창업자 가능 · 맞춤형 컨설팅</div>
+      <div class="url"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178559" target="_blank">k-startup · 178559</a></div>
+    </div>
+    <div class="card a">
+      <div class="row1"><div class="title">⑤ 서대문구-<b>서울시립대</b> 창업센터</div><span class="dday normal">D-12 · 8/23</span></div>
+      <div class="info">서울 서대문구 · 예비/7년미만 · <b>여성 우대</b> · 최장 5년</div>
+      <div class="url"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178697" target="_blank">k-startup · 178697</a></div>
+    </div>
+  </section>
+
+  <!-- B그룹 -->
+  <section>
+    <h2>🔧 B그룹 — 요건 충족 시 <span class="badge" style="background:var(--b)">6건 · NEW 1</span></h2>
+
+    <div class="card b new-item">
+      <div class="row1"><div class="title"><span class="new-tag">NEW</span> 초기창업패키지 <b>로켓십 IR 경진대회</b></div><span class="dday normal">D-10 · 8/21</span></div>
+      <div class="info">[신규] 투자 연계 IR 경진대회 · <b>시드투자 획득 → TIPS 로드맵 진입경로</b></div>
+      <div class="info" style="color:var(--accent)">💡 어제 마감된 프리팁스(1억) 대안 — 경진대회로 투자 유치 후 비수도권 법인→TIPS</div>
+      <div class="url"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178824" target="_blank">k-startup · 178824</a></div>
+    </div>
+
+    <div class="card b">
+      <div class="row1"><div class="title">2026년 <b>블록체인 기업성장허브</b> (서울 송파구, 1~4년 무상)</div><span class="dday normal">D-16 · 8/27</span></div>
+      <div class="info">10년이내 블록체인 중소기업 또는 예비벤처확인서 보유자 · gong@kisa.or.kr</div>
+      <div class="url"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178780" target="_blank">k-startup · 178780</a></div>
+    </div>
+
+    <div class="card b">
+      <div class="row1"><div class="title">성남 아이디에이션(8/13) · 산림복지 FOR SEED(8/25) · 가상융합허브(8/21)</div></div>
+      <div class="info">상세는 <a href="../지원사업조사_여성블록체인AI창업자_20260810/보고서.html" style="color:var(--a)">직전 보고서</a> 참조</div>
+    </div>
+  </section>
+
+  <!-- 마감된 것 -->
+  <section>
+    <h2>✖ 8/10 마감 (블록체인 6건) <span class="badge" style="background:var(--ink)">CLOSED</span></h2>
+    <div class="card closed-tag">
+      <div class="row1"><div class="title">C Tri Nexus AI 딥테크 · B5 프리팁스(1억) — 확정 마감</div></div>
+      <div class="info" style="color:var(--ink3)">그 외 B1 블록체인 API 자금 · B4 인천 · C1 대구 · C LAM — 8/10 마감 경과 (partial로 확정불가, 제거)</div>
+    </div>
+  </section>
+
+  <!-- C그룹 -->
+  <section>
+    <h2>🔄 C그룹 — 변형·이전 시 <span class="badge" style="background:var(--c)">7건 · NEW 1</span></h2>
+    <div class="card c new-item">
+      <div class="row1"><div class="title"><span class="new-tag">NEW</span> 로봇 공간컴퓨팅 예비창업 <b>추가모집</b></div><span class="dday">D-8 · 8/19</span></div>
+      <div class="info">[신규] 예비창업팀 · AI/공간컴퓨팅/로봇/XR · 개발/사업화비+인건비</div>
+      <div class="url"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178833" target="_blank">k-startup · 178833</a></div>
+    </div>
+    <div class="card c">
+      <div class="row1"><div class="title">강소특구 이노테크(9/30) · 충북 SKT AI(8/14) · 산림 지식재산권(8/23) · 경기 AI · 대구 가상융합 외</div></div>
+      <div class="info">상세는 직전 보고서 참조</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🎯 우선순위 액션</h2>
+    <div class="timeline">
+      <div class="tl-item urgent"><div class="tl-date urgent">⚡ 8/11(오늘)</div><div class="tl-body"><b>A1 서울 AI 허브</b> + <b>A2 AI 창업가 양성</b> — 오늘 마감</div></div>
+      <div class="tl-item urgent"><div class="tl-date urgent">8/13(목)</div><div class="tl-body"><b>A3 여성 1인창조센터(1순위)</b></div></div>
+      <div class="tl-item"><div class="tl-date">8/14(금)</div><div class="tl-body">A 서울 IP디딤돌 · A4 공공데이터 AI</div></div>
+      <div class="tl-item"><div class="tl-date">8/19(화)</div><div class="tl-body"><b>[NEW] C 로봇 공간컴퓨팅 예비창업 추가</b></div></div>
+      <div class="tl-item"><div class="tl-date">8/21(목)</div><div class="tl-body"><b>[NEW] B 로켓십 IR 경진대회</b> (투자연계) · B2 가상융합허브</div></div>
+      <div class="tl-item"><div class="tl-date">8/27(목)</div><div class="tl-body">B 블록체인 기업성장허브 (서울 송파구)</div></div>
+    </div>
+  </section>
+
+  <div class="callout warn">
+    <h3 style="margin:0 0 6px">⚠ 한계 고지</h3>
+    <ul class="clean">
+      <li><b>증분 모드</b>: NEW 74건 중 관심 매치 12건, 핵심 2건 상세검증.</li>
+      <li><b>8/10 마감 블록체인 4건</b>: partial로 확정 불가, 보수적 제거. 연장됐을 수 있으니 원문 확인 권장.</li>
+      <li><b>기업마당·NIPA partial</b>: 54건 SUPPRESSED.</li>
+      <li><b>게이트 PASS</b>: 결정론적 recall 148건 누락 0.</li>
+    </ul>
+  </div>
+
+  <footer>
+    직전 보고서: <a href="../지원사업조사_여성블록체인AI창업자_20260810/보고서.html" style="color:var(--a)">2026-08-10</a><br>
+    결정론적 파이프라인: screen → negative_audit → gate(<b>PASS</b>) → render<br>
+    다음 조사: 2026-08-12 08:00
+  </footer>
+
+</div>
+</body>
+</html>
