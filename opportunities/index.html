@@ -9,15 +9,23 @@
 .wrap{max-width:820px;margin:auto;padding:24px 16px 64px}.nav{margin-bottom:12px}.nav a{color:var(--blue);text-decoration:none;font-weight:700}
 .hero{background:linear-gradient(135deg,#172554,#4338ca 58%,#7c3aed);color:#fff;border-radius:22px;padding:28px 24px;box-shadow:0 16px 38px #25358f33}
 .hero .kicker{font-size:12px;letter-spacing:.12em;font-weight:800;opacity:.8}h1{font-size:27px;line-height:1.25;margin:7px 0}.hero p{margin:0;opacity:.9;font-size:14px}.legend{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.legend span,.timing,.priority{font-size:11px;font-weight:800;border-radius:999px;padding:4px 9px}
-.legend span{background:#ffffff1f;border:1px solid #ffffff38}.summary{margin:20px 3px 10px;color:var(--muted);font-size:13px}
+.legend span{background:#ffffff1f;border:1px solid #ffffff38}.summary{margin:20px 3px 10px;color:var(--muted);font-size:13px}.filters{position:sticky;top:0;z-index:10;display:flex;gap:7px;flex-wrap:wrap;background:#f5f7fbeb;backdrop-filter:blur(8px);padding:10px 0}.filters button,.decision button{border:1px solid #cfd6e3;background:#fff;color:#344054;border-radius:10px;padding:9px 12px;font-weight:750;cursor:pointer}.filters button.active{background:#172554;color:#fff;border-color:#172554}.reset{margin-left:auto!important;color:#667085!important}.filter-note{margin:0 3px 6px;color:var(--muted);font-size:12px}
 .opportunity{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:21px;margin:12px 0;box-shadow:0 5px 18px #1725540b}.top{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.rank{display:grid;place-items:center;width:27px;height:27px;background:#172554;color:#fff;border-radius:8px;font-size:13px;font-weight:900}.timing.now{background:#dcfce7;color:var(--green)}.timing.corporate{background:#ede9fe;color:#6d28d9}.timing.conditional{background:#fef3c7;color:var(--amber)}.priority{background:#eff6ff;color:#1d4ed8}
-h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);font-size:13px;margin:0 0 13px}.fit{background:#f8fafc;border-left:4px solid var(--blue);padding:11px 13px;border-radius:0 9px 9px 0;margin:0 0 14px}ul{list-style:none;margin:0;padding:0}li{display:grid;grid-template-columns:90px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid #eef1f5;font-size:14px}li strong{color:#475467}.legal{margin-top:14px;background:#fff7ed;color:#7c2d12;padding:11px 13px;border-radius:10px;font-size:13px}.official{display:block;margin-top:15px;text-align:center;background:var(--blue);color:#fff;text-decoration:none;border-radius:11px;padding:12px;font-weight:800}.empty{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px;text-align:center;color:var(--muted)}footer{text-align:center;color:#98a2b3;font-size:12px;margin-top:28px}
+h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);font-size:13px;margin:0 0 13px}.fit{background:#f8fafc;border-left:4px solid var(--blue);padding:11px 13px;border-radius:0 9px 9px 0;margin:0 0 14px}ul{list-style:none;margin:0;padding:0}li{display:grid;grid-template-columns:90px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid #eef1f5;font-size:14px}li strong{color:#475467}.legal{margin-top:14px;background:#fff7ed;color:#7c2d12;padding:11px 13px;border-radius:10px;font-size:13px}.official{display:block;margin-top:15px;text-align:center;background:var(--blue);color:#fff;text-decoration:none;border-radius:11px;padding:12px;font-weight:800}.decision{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.decision button.selected[data-status="interested"]{background:#ecfdf3;color:#166534;border-color:#86efac}.decision button.selected[data-status="dismissed"]{background:#f2f4f7;color:#475467;border-color:#98a2b3}.opportunity[hidden]{display:none}.empty{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px;text-align:center;color:var(--muted)}footer{text-align:center;color:#98a2b3;font-size:12px;margin-top:28px}
 @media(max-width:560px){h1{font-size:23px}.hero{padding:24px 19px}.opportunity{padding:18px 16px}li{grid-template-columns:1fr;gap:2px}}
 </style></head><body><main class="wrap">
 <div class="nav"><a href="../">← 전체 지원사업 보고서</a></div>
 <section class="hero"><div class="kicker">MODERN WEB LAB</div><h1>모던웹연구소 맞춤 지원사업</h1><p>현재 개인사업자 자격과 2026년 법인전환 가능성을 함께 검토한 선별 목록입니다.</p><div class="legend"><span>현재 신청 가능</span><span>조건부·확인 필요</span><span>법인전환 후 가능</span></div></section>
-<p class="summary">접수 중인 선별 공고 20건 · 마지막 업데이트 2026-08-31 17:02 KST</p>
-<article class="opportunity">
+<p class="summary">접수 중인 선별 공고 20건 · 마지막 업데이트 2026-09-01 01:25 KST</p>
+<div class="filters" aria-label="관심 상태별 보기">
+  <button type="button" class="active" data-filter="undecided">새로 볼 공고 <span data-count="undecided">0</span></button>
+  <button type="button" data-filter="interested">관심 있음 <span data-count="interested">0</span></button>
+  <button type="button" data-filter="dismissed">관심 없음 <span data-count="dismissed">0</span></button>
+  <button type="button" data-filter="all">전체 <span data-count="all">0</span></button>
+  <button type="button" class="reset" data-action="reset">결정 초기화</button>
+</div>
+<p class="filter-note">선택은 이 브라우저에 저장되어 목록이 갱신되어도 유지됩니다.</p>
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125678">
   <div class="top"><span class="rank">1</span><span class="timing now">현재 신청 가능</span><span class="priority">적합도 높음</span></div>
   <h2>2026년 H-스타트업 창업경진대회</h2>
   <p class="org">화성시·화성산업진흥원</p>
@@ -30,8 +38,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 현재 개인사업자가 전국 단위 업력 3년 이내 초기창업기업에 해당하므로 법인전환을 기다릴 필요가 없습니다. 법인 명의로 신청하려면 2026년 9월 7일까지 법인설립등기와 법인사업자등록을 마치고 법인등기부등본·법인사업자등록증 등 법인 서류를 준비해야 합니다. 새 법인의 업력·실적은 별도로 판단하며 개인사업자의 업력·실적 승계를 가정하지 않습니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125678" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125613">
   <div class="top"><span class="rank">2</span><span class="timing now">현재 신청 가능</span><span class="priority">적합도 높음</span></div>
   <h2>2026년 마이데이터 컨설팅 및 교육 지원 사업</h2>
   <p class="org">과학기술정보통신부·한국데이터산업진흥원</p>
@@ -44,8 +56,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 현재 개인사업자로 신청할 수 있어 전환을 기다릴 실익은 없습니다. 선정 후 법인전환 시 신청자와 협약 주체가 달라지므로 승계·변경 가능 여부를 운영사무국에 확인해야 합니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125613" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125611">
   <div class="top"><span class="rank">3</span><span class="timing now">현재 신청 가능</span><span class="priority">적합도 높음</span></div>
   <h2>2026년 2차 모두의 창업 프로젝트</h2>
   <p class="org">중소벤처기업부·창업진흥원</p>
@@ -58,8 +74,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 현재 개인사업자가 공고상 업력 7년 이내 기창업자에 해당하므로 법인전환을 기다릴 필요가 없습니다. 법인 명의로 신청하려면 2026년 9월 17일까지 법인설립등기와 법인사업자등록을 완료하고 법인등기부등본·법인사업자등록증 등 법인 명의 서류를 갖춰야 합니다. 이 경우 새 법인의 업력·실적은 별도로 판단하며 개인사업자의 업력·실적 승계를 가정하지 않습니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125611" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.nipa.kr/home/2-1/16908">
   <div class="top"><span class="rank">4</span><span class="timing now">현재 신청 가능</span><span class="priority">적합도 높음</span></div>
   <h2>2026년 GovTech 창업경진대회</h2>
   <p class="org">과학기술정보통신부·정보통신산업진흥원(NIPA)</p>
@@ -72,8 +92,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 현재 개인사업자가 초기창업기업으로 신청할 수 있어 법인전환을 기다릴 필요가 없습니다. 법인 명의로 신청하려면 2026년 9월 21일 오전 10시 전에 법인설립등기와 법인사업자등록을 완료하고 법인등기부등본·법인사업자등록증 등 법인 명의 서류를 갖춰야 합니다. 새 법인의 업력·실적은 별도로 판단하며 개인사업자의 업력·실적 승계를 가정하지 않습니다.</div>
   <a class="official" href="https://www.nipa.kr/home/2-1/16908" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.nia.or.kr/site/nia_kor/ex/bbs/View.do?cbIdx=99835&amp;bcIdx=29909&amp;parentSeq=29909">
   <div class="top"><span class="rank">5</span><span class="timing now">현재 신청 가능</span><span class="priority">적합도 조건부</span></div>
   <h2>AI허브 안심존 Hands-On 데이터분석 교육생 모집</h2>
   <p class="org">한국지능정보사회진흥원(NIA)·AI허브 안심존 운영단</p>
@@ -86,8 +110,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 개인의 코딩 역량·관심과 현장 참석 가능 여부를 기준으로 안내된 교육이므로 개인사업자 또는 법인 여부가 자격에 영향을 준다는 근거는 없습니다. 법인전환은 필요하지 않으며 법인 서류 제출요건도 공식 안내에서 확인되지 않습니다.</div>
   <a class="official" href="https://www.nia.or.kr/site/nia_kor/ex/bbs/View.do?cbIdx=99835&amp;bcIdx=29909&amp;parentSeq=29909" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125672">
   <div class="top"><span class="rank">6</span><span class="timing now">현재 신청 가능</span><span class="priority">적합도 조건부</span></div>
   <h2>BOUNCE 2026 글로벌 오피스아워 참여 스타트업 모집</h2>
   <p class="org">부산광역시·부산창조경제혁신센터</p>
@@ -100,8 +128,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 현재 개인사업자가 전국 소재 창업 7년 미만 스타트업 요건에 들어 법인전환은 필요하지 않습니다. 법인 명의로 신청하려면 2026년 9월 4일까지 법인설립등기와 법인사업자등록을 완료하고 법인등기부등본·법인사업자등록증 등 법인 명의 서류를 준비해야 합니다. 새 법인의 업력·실적은 별도로 판단하며 개인사업자의 업력·실적 승계를 가정하지 않습니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125672" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125739">
   <div class="top"><span class="rank">7</span><span class="timing conditional">조건부/확인 필요</span><span class="priority">적합도 조건부</span></div>
   <h2>2026년 미래혁신기술박람회 FIX 데이터 스페이스 기업공동관 참가기업 모집</h2>
   <p class="org">대구광역시·대구디지털혁신진흥원</p>
@@ -114,8 +146,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 현재 개인사업자의 신청 가능 여부가 요약문에는 명시되지 않아 확인이 필요합니다. 법인만 허용될 경우 2026년 9월 4일까지 법인설립등기와 법인사업자등록을 완료하고 법인등기부등본·법인사업자등록증 등 법인 명의 서류를 갖춰야 합니다. 새 법인의 업력·실적은 별도로 판단하며 개인사업자의 실적 승계를 가정하지 않습니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125739" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125908">
   <div class="top"><span class="rank">8</span><span class="timing conditional">조건부/확인 필요</span><span class="priority">적합도 조건부</span></div>
   <h2>2026년 스마트도시 특화단지 데이터바우처 지원사업 모집 공고</h2>
   <p class="org">국토교통부·경북대학교 산학협력단 첨단정보통신융합산업기술원</p>
@@ -128,8 +164,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 현재 개인사업자가 중소기업 및 세부 수요기업 요건에 포함되는지 먼저 확인해야 합니다. 법인만 허용되거나 법인 명의로 신청하려면 2026년 9월 4일까지 법인설립등기와 법인사업자등록을 완료하고 법인등기부등본·법인사업자등록증·법인 명의 중소기업확인서 등 요구 서류를 갖춰야 합니다. 새 법인의 업력·실적과 데이터 활용역량은 별도로 판단하며 개인사업자의 업력·실적 승계를 가정하지 않습니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125908" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125697">
   <div class="top"><span class="rank">9</span><span class="timing conditional">조건부/확인 필요</span><span class="priority">적합도 조건부</span></div>
   <h2>2026년 시설농업 AI로봇 실증기반 구축사업 시험·평가·인증 지원 프로그램 참여기업 모집</h2>
   <p class="org">산업통상부·전북테크노파크</p>
@@ -142,8 +182,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 현재 개인사업자도 기업 범주에 포함되는지, 업종코드 940926과 제안 솔루션이 시설농업 AI로봇 관련기업으로 인정되는지 수행기관 확인이 필요합니다. 법인만 허용될 경우 2026년 9월 4일까지 법인설립등기와 법인사업자등록을 완료하고 법인등기부등본·법인사업자등록증 등 법인 서류를 준비해야 합니다. 법인전환만으로 산업 적합성이 생기는 것은 아니며 개인사업자의 개발실적 승계를 가정하지 않습니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125697" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125632">
   <div class="top"><span class="rank">10</span><span class="timing conditional">조건부/확인 필요</span><span class="priority">적합도 조건부</span></div>
   <h2>2027년 영국 런던 교육장비 전시회(BETT) 한국관 참가기업 모집</h2>
   <p class="org">산업통상부·대한무역투자진흥공사</p>
@@ -156,8 +200,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 모집대상이 기업으로만 표시되어 개인사업자 허용 여부가 불명확합니다. 법인만 허용된다면 마감일까지 법인설립등기와 법인사업자등록을 마쳐야 하며, 개인사업자 업력·수출실적 승계를 임의로 가정하면 안 됩니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125632" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125751">
   <div class="top"><span class="rank">11</span><span class="timing conditional">조건부/확인 필요</span><span class="priority">적합도 조건부</span></div>
   <h2>2026년 2차 해외 온라인 플랫폼 물류지원 사업 참여 소상공인 모집</h2>
   <p class="org">중소벤처기업부·소상공인시장진흥공단</p>
@@ -170,8 +218,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 현재 개인사업자는 소상공인 기준과 2025년 해외 플랫폼 주문량 월평균 40건 이상 또는 해외 물류비 600만원 이상 요건을 실제로 충족할 때 신청할 수 있습니다. 2026년에 신설하는 법인은 개인사업자의 2025년 주문·물류비 실적 승계를 가정할 수 없으므로 법인전환만으로 자격이 생기지 않습니다. 법인 명의 신청을 검토한다면 2026년 9월 8일까지 법인설립등기와 법인사업자등록을 완료하고 법인등기부등본·법인사업자등록증·법인 명의 중소기업확인서(소상공인) 및 법인 자체의 인정 가능한 전년도 실적증빙을 갖춰야 합니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125751" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125679">
   <div class="top"><span class="rank">12</span><span class="timing conditional">조건부/확인 필요</span><span class="priority">적합도 조건부</span></div>
   <h2>2026년 중동상황 대응 중소기업 수출위기극복 및 대체시장 개척 심화컨설팅</h2>
   <p class="org">서울특별시·서울경제진흥원</p>
@@ -184,8 +236,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 현재 개인사업자도 중소기업 요건과 중동 수출실적 또는 진출 희망의향 요건을 충족하면 신청할 수 있습니다. 법인 명의로 신청하려면 2026년 9월 9일까지 법인설립등기와 서울 관할 세무서의 법인사업자등록을 완료하고 법인등기부등본·법인사업자등록증·중소기업확인서 등 법인 명의 서류를 준비해야 합니다. 새 법인의 수출실적은 별도로 판단하며 개인사업자의 업력·수출실적 승계를 가정하지 않습니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125679" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125850">
   <div class="top"><span class="rank">13</span><span class="timing conditional">조건부/확인 필요</span><span class="priority">적합도 조건부</span></div>
   <h2>2026년 서울용산시제품제작소 AI·스마트전자제품 금형지원 기업 모집</h2>
   <p class="org">서울특별시·한국전자정보통신산업진흥회(KEA)</p>
@@ -198,8 +254,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 현재 개인사업자가 창업기업 또는 중소기업 범주로 신청 가능한지와 전자기기 개발·제조기업 요건 충족 여부를 확인해야 합니다. 법인만 허용될 경우 2026년 9월 10일까지 법인설립등기와 법인사업자등록을 완료하고 법인등기부등본·법인사업자등록증·법인 명의 중소기업확인서 및 제품 개발·제조 증빙을 준비해야 합니다. 새 법인의 업력·제품·개발실적은 별도로 판단하며 개인사업자의 실적 승계를 가정하지 않습니다. 법인전환만으로 전자제품 요건이 충족되는 것은 아닙니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125850" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125825">
   <div class="top"><span class="rank">14</span><span class="timing conditional">조건부/확인 필요</span><span class="priority">적합도 조건부</span></div>
   <h2>2026년 온디바이스AI 제품개발·제조 지원기업 모집</h2>
   <p class="org">산업통상부·한국전자정보통신산업진흥회(KEA)·한국전자기술연구원(KETI)</p>
@@ -212,8 +272,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 공고 요약은 중소·중견기업을 대상으로 하나 개인사업자 허용 여부는 명시하지 않아 확인이 필요합니다. 법인만 허용된다면 2026년 9월 14일까지 법인설립등기와 법인사업자등록을 완료하고 법인등기부등본·법인사업자등록증·법인 명의 중소기업확인서 등 요구 서류를 갖춰야 합니다. 새 법인의 업력·제품·개발실적은 별도로 판단하며 개인사업자의 업력·실적 승계를 가정하지 않습니다. 법인전환만으로 하드웨어 제품 요건이 충족되는 것은 아닙니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125825" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125877">
   <div class="top"><span class="rank">15</span><span class="timing conditional">조건부/확인 필요</span><span class="priority">적합도 조건부</span></div>
   <h2>2026년 3차 정보보호제품 성능평가 지원 공모 사업</h2>
   <p class="org">과학기술정보통신부·한국인터넷진흥원(KISA)</p>
@@ -226,8 +290,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 공고 요약은 국내 정보보호제품 개발 ‘기업’을 대상으로 하며 개인사업자 허용 여부가 명시되지 않아 확인이 필요합니다. 법인만 허용될 경우 2026년 9월 16일까지 법인설립등기와 법인사업자등록을 완료하고 법인등기부등본·법인사업자등록증 및 법인 명의 제품·개발 증빙을 갖춰야 합니다. 새 법인의 제품·개발실적은 별도로 판단하며 개인사업자의 실적 승계를 가정하지 않습니다. 법인전환만으로 정보보호제품 보유요건이 생기지는 않습니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125877" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.nia.or.kr/site/nia_kor/ex/bbs/View.do?cbIdx=99835&amp;bcIdx=29899&amp;parentSeq=29899">
   <div class="top"><span class="rank">16</span><span class="timing conditional">조건부/확인 필요</span><span class="priority">적합도 조건부</span></div>
   <h2>2026년 디지털정부 해외진출 컨설턴트 2차 경력자 과정 교육생 모집</h2>
   <p class="org">행정안전부·한국지능정보사회진흥원(NIA)</p>
@@ -240,8 +308,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 교육대상은 개인의 공공·민간 디지털정부·ICT 분야 경력을 기준으로 안내되어 법인전환이 자격을 자동으로 만들지 않습니다. 현재 개인사업자 대표의 프로젝트·용역 경력이 인정되는지 확인하는 것이 우선이며, 법인전환 후 신청하더라도 2026년 9월 29일 오후 6시 전에 법인설립등기와 법인사업자등록을 마쳐야 법인 재직 경력을 증명할 수 있습니다. 이 경우 법인등기부등본·법인사업자등록증과 법인 명의 경력증빙이 필요할 수 있고, 개인사업자의 업력·실적 승계를 가정하지 않습니다.</div>
   <a class="official" href="https://www.nia.or.kr/site/nia_kor/ex/bbs/View.do?cbIdx=99835&amp;bcIdx=29899&amp;parentSeq=29899" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125880">
   <div class="top"><span class="rank">17</span><span class="timing conditional">조건부/확인 필요</span><span class="priority">적합도 조건부</span></div>
   <h2>2026년 2차 스마트상점 기술보급사업 참여 소상공인 모집 공고(구입형·렌탈형·S/W형)</h2>
   <p class="org">중소벤처기업부·소상공인시장진흥공단</p>
@@ -254,8 +326,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 법인전환 없이 현재 개인사업자의 점포·소상공인 요건 충족 여부를 먼저 확인해야 합니다. 법인으로 신청하려면 2026년 9월 30일까지 법인설립등기와 법인사업자등록을 완료하고 법인등기부등본·법인사업자등록증 및 법인 명의 소상공인확인서를 준비해야 합니다. 새 법인이 별도의 정상 영업 점포 요건을 충족해야 하며 개인사업자의 업력·영업실적 승계를 가정하지 않습니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125880" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.msit.go.kr/bbs/view.do?sCode=user&amp;mPid=121&amp;mId=311&amp;bbsSeqNo=100&amp;nttSeqNo=3186868">
   <div class="top"><span class="rank">18</span><span class="timing conditional">조건부/확인 필요</span><span class="priority">적합도 조건부</span></div>
   <h2>2026년 AX실증밸리조성(R&amp;D) 사업 신규지원 대상과제 공고</h2>
   <p class="org">과학기술정보통신부·산업통상부·기후에너지환경부·인공지능산업융합사업단</p>
@@ -268,8 +344,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 현재 개인사업자가 관련 규정상 기업 연구개발기관으로 인정되는지 확인해야 합니다. 법인으로 신청하려면 2026년 9월 30일 마감 전 법인설립등기와 법인사업자등록을 완료하고 법인등기사항증명서·법인사업자등록증 및 법인 명의 연구인력·재무·과제수행 증빙을 갖춰야 합니다. 법인전환만으로 과제·실증·컨소시엄 요건이 충족되지는 않으며, 새 법인의 업력·실적은 별도로 판단하고 개인사업자의 업력·실적 승계를 가정하지 않습니다.</div>
   <a class="official" href="https://www.msit.go.kr/bbs/view.do?sCode=user&amp;mPid=121&amp;mId=311&amp;bbsSeqNo=100&amp;nttSeqNo=3186868" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125666">
   <div class="top"><span class="rank">19</span><span class="timing conditional">조건부/확인 필요</span><span class="priority">적합도 조건부</span></div>
   <h2>2026년 대한민국 물산업 혁신 창업대전(Startup Water 2026)</h2>
   <p class="org">기후에너지환경부·한국수자원공사</p>
@@ -282,8 +362,12 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 물산업 분야 적합성이 인정되면 현재 개인사업자로 사업화 부문 신청이 가능합니다. 법인 명의로 신청하려면 2026년 10월 19일까지 법인설립등기와 법인사업자등록을 완료하고 법인등기부등본·법인사업자등록증 등 법인 명의 서류를 갖춰야 합니다. 새 법인의 업력·실적은 별도로 판단하며 개인사업자의 업력·실적 승계를 가정하지 않습니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125666" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
-<article class="opportunity">
+<article class="opportunity" data-opportunity-id="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125978">
   <div class="top"><span class="rank">20</span><span class="timing conditional">조건부/확인 필요</span><span class="priority">적합도 조건부</span></div>
   <h2>중소제조 특화 Multi AI Agent 개발(R&amp;D) 점프업 Track 시행계획 공고</h2>
   <p class="org">중소벤처기업부·중소기업기술정보진흥원</p>
@@ -296,6 +380,58 @@ h2{font-size:20px;line-height:1.35;margin:14px 0 2px}.org{color:var(--muted);fon
   </ul>
   <div class="legal"><strong>법인전환 유의:</strong> 현재 개인사업자도 중소기업 및 연구개발기관 요건에 포함되는지 확인해야 하며, 법인전환 자체만으로 기술역량·컨소시엄 요건이 충족되지는 않습니다. 법인 명의로 신청하려면 늦어도 2026년 10월 30일 접수 마감 전 법인설립등기와 법인사업자등록을 완료하고 법인등기사항증명서·법인사업자등록증·법인 명의 중소기업확인서 및 법인 자체의 연구인력·기술역량 증빙을 갖춰야 합니다. 새 법인의 업력·실적은 별도로 판단하며 개인사업자의 업력·실적 승계를 가정하지 않습니다.</div>
   <a class="official" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125978" target="_blank" rel="noopener noreferrer">공식 공고 바로가기 →</a>
+  <div class="decision" aria-label="관심 여부 기록">
+    <button type="button" data-status="interested">★ 관심 있음</button>
+    <button type="button" data-status="dismissed">관심 없음</button>
+  </div>
 </article>
 <footer>공식 공고문을 기준으로 검토하며, 최종 신청 전 수행기관 확인이 필요합니다.</footer>
-</main></body></html>
+</main>
+<script>
+window.OPPORTUNITY_IDS = ["https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125678", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125613", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125611", "https://www.nipa.kr/home/2-1/16908", "https://www.nia.or.kr/site/nia_kor/ex/bbs/View.do?cbIdx=99835&bcIdx=29909&parentSeq=29909", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125672", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125739", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125908", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125697", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125632", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125751", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125679", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125850", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125825", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125877", "https://www.nia.or.kr/site/nia_kor/ex/bbs/View.do?cbIdx=99835&bcIdx=29899&parentSeq=29899", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125880", "https://www.msit.go.kr/bbs/view.do?sCode=user&mPid=121&mId=311&bbsSeqNo=100&nttSeqNo=3186868", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125666", "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125978"];
+(() => {
+  const STORAGE_KEY = 'modernweb-opportunity-decisions-v1';
+  const cards = [...document.querySelectorAll('.opportunity')];
+  const filters = [...document.querySelectorAll('[data-filter]')];
+  let activeFilter = 'undecided';
+  let decisions = {};
+  try { decisions = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') || {}; } catch (_) { decisions = {}; }
+
+  const statusOf = card => decisions[card.dataset.opportunityId] || 'undecided';
+  const save = () => localStorage.setItem(STORAGE_KEY, JSON.stringify(decisions));
+  const render = () => {
+    const counts = {undecided: 0, interested: 0, dismissed: 0, all: cards.length};
+    cards.forEach(card => {
+      const status = statusOf(card);
+      counts[status] += 1;
+      card.hidden = activeFilter !== 'all' && status !== activeFilter;
+      card.querySelectorAll('[data-status]').forEach(button =>
+        button.classList.toggle('selected', button.dataset.status === status));
+    });
+    document.querySelectorAll('[data-count]').forEach(node => node.textContent = counts[node.dataset.count]);
+    filters.forEach(button => button.classList.toggle('active', button.dataset.filter === activeFilter));
+  };
+
+  document.addEventListener('click', event => {
+    const statusButton = event.target.closest('[data-status]');
+    if (statusButton) {
+      const card = statusButton.closest('.opportunity');
+      const status = statusButton.dataset.status;
+      if (decisions[card.dataset.opportunityId] === status) delete decisions[card.dataset.opportunityId];
+      else decisions[card.dataset.opportunityId] = status;
+      save();
+      render();
+      return;
+    }
+    const filterButton = event.target.closest('[data-filter]');
+    if (filterButton) { activeFilter = filterButton.dataset.filter; render(); return; }
+    if (event.target.closest('[data-action="reset"]') && confirm('저장한 관심 여부를 모두 초기화할까요?')) {
+      decisions = {};
+      save();
+      activeFilter = 'undecided';
+      render();
+    }
+  });
+  render();
+})();
+</script></body></html>
