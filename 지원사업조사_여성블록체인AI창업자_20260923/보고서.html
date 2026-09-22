@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#dc2626">
+<title>지원사업 조사 (9/23, CX 오늘 14:00 마감)</title>
+<style>
+  :root{--bg:#f7f8fa;--card:#fff;--ink:#1f2330;--ink2:#5a6275;--ink3:#8b93a7;--line:#e6e8ee;--a:#1a73e8;--b:#d97706;--c:#6b7280;--danger:#dc2626;--danger-bg:#fdecec;--ok:#16a34a;--accent:#7c3aed;--new:#16a34a;--new-bg:#dcfce7;--mapo:#0d9488;--mapo-bg:#ccfbf1;--women:#be185d;--women-bg:#fce7f3;--mega:#f59e0b;--mega-bg:#fef3c7;}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.6}
+  .wrap{max-width:880px;margin:0 auto;padding:24px 18px 80px}
+  .hero{background:linear-gradient(135deg,#dc2626 0%,#1e40af 100%);color:#fff;border-radius:18px;padding:28px;box-shadow:0 8px 30px rgba(220,38,38,.25)}
+  .hero .kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.95;font-weight:600}
+  .hero h1{margin:8px 0 12px;font-size:22px;font-weight:800}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;opacity:.95}
+  .hero .meta b{font-weight:600}
+  .banner{border-radius:14px;padding:16px 18px;margin:16px 0;color:#fff}
+  .banner.urgent{background:var(--danger);animation:gp 1.6s infinite}
+  @keyframes gp{0%,100%{box-shadow:0 0 0 0 rgba(220,38,38,.5)}50%{box-shadow:0 0 0 10px rgba(220,38,38,0)}}
+  .banner.mapo{background:var(--mapo)}
+  .banner.newb{background:#1d4ed8}
+  .banner.gap{background:#7c3aed}
+  .banner .t{font-weight:800;font-size:16px;margin-bottom:4px}
+  .banner .d{font-size:13px;opacity:.95}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:10px;margin-bottom:14px}
+  .stat{background:var(--card);border-radius:12px;padding:12px;border:1px solid var(--line);text-align:center}
+  .stat .num{font-size:20px;font-weight:800}
+  .stat .label{font-size:11px;color:var(--ink3);margin-top:2px}
+  .stat.pass .num{color:var(--ok)} .stat.urgent .num{color:var(--danger)} .stat.mapo .num{color:var(--mapo)} .stat.newb .num{color:#1d4ed8}
+  section{margin-top:24px}
+  h2{font-size:18px;margin:0 0 12px;font-weight:800;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  h2 .badge{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;color:#fff}
+  .card{background:var(--card);border-radius:13px;padding:15px 17px;margin-bottom:10px;border:1px solid var(--line);border-left-width:5px}
+  .card.a{border-left-color:var(--a)} .card.b{border-left-color:var(--b)} .card.c{border-left-color:var(--c)}
+  .card.mapo-card{border-left-color:var(--mapo);background:linear-gradient(90deg,#f0fdfa 0%,#fff 30%)}
+  .card.mega-card{border:2px solid var(--mega);background:linear-gradient(135deg,#fffbeb 0%,#fff 40%)}
+  .card.women-card{border:2px solid var(--women);background:linear-gradient(135deg,#fdf2f8 0%,#fff 40%)}
+  .card .row1{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}
+  .card .title{font-size:15px;font-weight:700;flex:1;min-width:200px}
+  .card .title a{color:inherit;text-decoration:none;border-bottom:2px solid var(--a)}
+  .card.mapo-card .title a{border-bottom-color:var(--mapo)} .card.mega-card .title a{border-bottom-color:var(--mega)} .card.women-card .title a{border-bottom-color:var(--women)}
+  .tagx{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:5px;white-space:nowrap;display:inline-block;margin-right:4px;vertical-align:middle}
+  .tagx.mapo{background:var(--mapo-bg);color:var(--mapo)} .tagx.women{background:var(--women-bg);color:var(--women)} .tagx.new{background:var(--new-bg);color:var(--new)} .tagx.mega{background:var(--mega-bg);color:#b45309}
+  .dday{font-size:11px;font-weight:800;padding:3px 8px;border-radius:7px;white-space:nowrap;background:var(--danger-bg);color:var(--danger)}
+  .dday.today{background:var(--danger);color:#fff;animation:gpp 1.2s infinite}
+  @keyframes gpp{0%,100%{box-shadow:0 0 0 0 rgba(220,38,38,.55)}50%{box-shadow:0 0 0 7px rgba(220,38,38,0)}}
+  .dday.normal{background:#eef0f4;color:var(--ink2)}
+  .info{font-size:13px;color:var(--ink2);margin-top:7px}
+  .info b{color:var(--ink);font-weight:600}
+  .golink{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:700;color:#fff;background:var(--a);padding:6px 12px;border-radius:8px;text-decoration:none}
+  .card.mapo-card .golink{background:var(--mapo)} .card.mega-card .golink{background:var(--mega)} .card.women-card .golink{background:var(--women)}
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;font-size:12.5px;margin-top:8px}
+  th,td{padding:8px 10px;text-align:left;border-bottom:1px solid #eef0f4}
+  thead th{background:#fafbfc;font-weight:700;color:var(--ink2);font-size:11px}
+  tbody tr:last-child td{border-bottom:none}
+  .callout{background:var(--card);border-radius:12px;padding:14px 16px;border:1px solid var(--line);margin-top:12px}
+  ul.clean{margin:6px 0 0;padding-left:18px}
+  ul.clean li{margin:4px 0;font-size:12.5px}
+  footer{margin-top:34px;padding-top:14px;border-top:1px solid var(--line);font-size:11.5px;color:var(--ink3)}
+  @media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}.hero{padding:22px 18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="kicker">20일 공백 복귀 조사 · 마포 생활권 · ⭐ MAP-O 경진대회 발굴</div>
+    <h1>여성·블록체인·AI 창업자 지원사업 조사</h1>
+    <div class="meta">
+      <span>📅 <b>2026-09-23</b></span>
+      <span>📍 <b>마포 웰하임</b> 생활권</span>
+      <span>👤 개인사업자 · <b>여성 창업자</b></span>
+      <span>🔗 전 43건 원문 링크</span>
+    </div>
+  </div>
+
+  <div class="banner gap"><div class="t">🔍 판정 정정 2건 — 원문 교차확인 결과</div><div class="d">블록체인 싱가포르 추가모집 <b>B→C 강등</b>(부산테크노파크·부산 기업 한정 확인) · 모두의 창업 "2차 1라운드" <b>철회</b>(9/17 종료 공고 재게시 확인) · Tokyo #15 신규(C).</div></div>
+
+  <div class="banner urgent">
+    <div class="t">⏰ 오늘(9/23) 마감 4건 — 나루 CX 14:00 · WISET 18:00 · AHAP 15:00 · 부산 블록체인</div>
+    <div class="d"><b>나루 CX 지금 접수 가능</b>(onoffmix.com/event/348335) · WISET 경력복귀는 이공계 학사 요건 확인 후 18:00 전 wbridge.or.kr 신청.</div>
+  </div>
+
+  <div class="banner mapo">
+    <div class="t">📍 마포 수집 뉴스 — CX 접수 가능 확인 · MAP-O D-13 · AI배움터 미게시</div>
+    <div class="d"><b>CX 공고 접수 가능 상태 최종 확인</b>(오늘 14:00) · MAP-O NEXT STAGE D-13(10/6) · AI 디지털배움터 추가모집 미게시 — 02-3153-8416 전화 확인.</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat mapo"><div class="num">A</div><div class="label">MAP-O 경진대회</div></div>
+    <div class="stat newb"><div class="num">2</div><div class="label">정정(강등·철회)</div></div>
+    <div class="stat urgent"><div class="num">4</div><div class="label">오늘 마감</div></div>
+    <div class="stat"><div class="num">43</div><div class="label">총 추천</div></div>
+    <div class="stat pass"><div class="num">✓</div><div class="label">링크게이트</div></div>
+  </div>
+
+  <!-- A그룹 -->
+  <section>
+    <h2>⭐ A그룹 — 즉시 지원 가능 <span class="badge" style="background:var(--a)">1건</span></h2>
+    <div class="card a mega-card">
+      <div class="row1"><div class="title"><span class="tagx mega">🚨마포직접</span><span class="tagx new">NEW</span><a href="https://naroo.or.kr/bbs/board.php?bo_table=notice_01&wr_id=276" target="_blank">마포 청년 창업 아이디어 경진대회 (MAP-O NEXT STAGE)</a></div><span class="dday normal">D-15 · 10/6 18:00</span></div>
+      <div class="info"><b>생성형 AI·기술혁신(로봇·사이버보안) 분야 명시</b> · 만 19~39세 · 예비창업자/창업 3년 이내 · <b>개인사업자 가능</b> · 전국 참가 · 대상 <b>300만원</b> 등 7팀 시상 + 1:1 멘토링·IR 피칭</div>
+      <div class="info">서류발표 10/12 → 본선 10/28 → 시상 11/3 · 접수 naroomentor@naver.com · 02-6261-1940</div>
+      <a class="golink" href="https://naroo.or.kr/bbs/board.php?bo_table=notice_01&wr_id=276" target="_blank">공고 바로가기 →</a>
+    </div>
+  </section>
+
+  <!-- B그룹 -->
+  <section>
+    <h2>🔧 B그룹 <span class="badge" style="background:var(--b)">12건 · 전건 개별 표시</span></h2>
+    <div class="card b" style="border:2px solid var(--accent)"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179303" target="_blank">블록체인 기업성장허브 입주기업 모집 (KISA)</a></div><span class="dday normal">D-16 · 10/7 16:00</span></div><div class="info"><b>블록체인 직접</b> · 사무공간 <b>무상</b>(송파, 기본 1년·최대 4년) · 예비창업자 가능(예비벤처확인서) · 전국 · 061-820-3943</div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179303" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">⚠강등</span><a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126605" target="_blank">블록체인 싱가포르 추가모집 (부산 한정)</a></div><span class="dday today">D-DAY · 9/23</span></div><div class="info">9/23 원문확인: <b>부산테크노파크·부산 기업 한정</b>(기업당 약 250만원) — 마포 거주 자격 미충족 B→C</div><a class="golink" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126605" target="_blank">공고 바로가기 →</a></div>
+    <div class="card b"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126309" target="_blank">AI 창업 경진대회 (부산진흥원·전국)</a></div><span class="dday normal">D-9 · 9/30</span></div><div class="info">팀 2~4인 · <b>이용권 총 700만 + 사업화 총 1억</b> · <a href="https://ai-startup-competition.kr" style="color:var(--b)">ai-startup-competition.kr</a> · 070-4618-1703</div><a class="golink" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126309" target="_blank">공고 바로가기 →</a></div>
+    <div class="card b women-card"><div class="row1"><div class="title"><span class="tagx new">NEW</span><span class="tagx women">여성특화</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179143" target="_blank">여성과학기술인 R&D 경력복귀 하반기</a></div><span class="dday">D-2 · 9/23</span></div><div class="info">여성 직접 매치 — 이공계 경력단절 여성 대상 추정, 자격 원문 확인</div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179143" target="_blank">공고 바로가기 →</a></div>
+    <div class="card b"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179236" target="_blank">AI 창업 트렌드 세미나 (멀티모달·에이전트)</a></div><span class="dday normal">D-29 · 10/20</span></div><div class="info">AI 비즈니스 실전 전략 — <b>아이템 선정에 직접 도움</b></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179236" target="_blank">공고 바로가기 →</a></div>
+    <div class="card b"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179187" target="_blank">서울창업허브 성수 입주기업 (하반기)</a></div><span class="dday">D-7 · 9/28</span></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179187" target="_blank">공고 바로가기 →</a></div>
+    <div class="card b women-card"><div class="row1"><div class="title"><span class="tagx new">NEW</span><span class="tagx women">여성특화</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179289" target="_blank">경기도여성창업보육센터 입주 연장공고</a></div><span class="dday">D-7 · 9/28</span></div><div class="info">9/15 1차 마감 후 <b>연장모집</b></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179289" target="_blank">공고 바로가기 →</a></div>
+    <div class="card b"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179270" target="_blank">서울소셜벤처허브 '허브 멤버스' 추가모집</a></div><span class="dday">D-8 · 9/29</span></div><div class="info">사회적 가치+사업 조합 — AI 소셜임팩트(만료) 대체</div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179270" target="_blank">공고 바로가기 →</a></div>
+    <div class="card b"><div class="row1"><div class="title"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179035" target="_blank">도로공사 청년 AI 스타트업 지원</a></div><span class="dday normal">D-9 · 9/30</span></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179035" target="_blank">공고 바로가기 →</a></div>
+    <div class="card b"><div class="row1"><div class="title"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179012" target="_blank">핀테크 위크 1:1 투자 밋업</a></div><span class="dday normal">D-35 · 10/26</span></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179012" target="_blank">공고 바로가기 →</a></div>
+    <div class="card b"><div class="row1"><div class="title"><a href="https://venture.yonsei.ac.kr/community/external/406" target="_blank">코리아 핀테크 위크 공모전</a></div><span class="dday normal">마감 확인필요</span></div><div class="info">행사 11/25~27</div><a class="golink" href="https://venture.yonsei.ac.kr/community/external/406" target="_blank">공고 바로가기 →</a></div>
+    <div class="card b mapo-card"><div class="row1"><div class="title"><span class="tagx mapo">마포</span><a href="https://www.mapo.go.kr/site/main/board/notice/277578" target="_blank">마포 사회연대경제 청년 일경험 참여청년</a></div><span class="dday normal">첨부확인</span></div><div class="info">02-3153-8114</div><a class="golink" href="https://www.mapo.go.kr/site/main/board/notice/277578" target="_blank">공고 바로가기 →</a></div>
+    <div class="card b"><div class="row1"><div class="title"><a href="https://campustown.seoul.go.kr/site/main/board/sct_news/3114" target="_blank">위치정보 맞춤형 컨설팅 (AI전환 포함)</a></div><span class="dday normal">상시</span></div><a class="golink" href="https://campustown.seoul.go.kr/site/main/board/sct_news/3114" target="_blank">공고 바로가기 →</a></div>
+  </section>
+
+  <!-- C그룹 -->
+  <section>
+    <h2>🔄 C그룹 <span class="badge" style="background:var(--c)">30건 · 전건 개별 표시</span></h2>
+    <div class="card c" style="border:2px solid var(--danger)"><div class="row1"><div class="title">⚡<a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126605" target="_blank">블록체인 싱가포르 사업화 추가모집 (내일 마감)</a></div><span class="dday today">D-DAY · 9/23</span></div><div class="info">부산 한정 강등 — 참고용 · 연장 없음</div><a class="golink" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126605" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c women-card"><div class="row1"><div class="title"><span class="tagx women">여성</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179143" target="_blank">여성과학기술인 경력복귀 (WISET)</a></div><span class="dday today">D-DAY · 18:00</span></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179143" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126681" target="_blank">대구 블록체인 싱가포르 핀테크 페스티벌</a></div><span class="dday normal">D-20 · 10/12</span></div><div class="info">⚠ 대구 소재 기업 한정 — 마포 거주 자격 미충족 · 053-215-8629</div><a class="golink" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126681" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c mapo-card"><div class="row1"><div class="title"><span class="tagx new">NEW</span><span class="tagx mapo">마포</span><a href="https://www.naroo.or.kr/bbs/board.php?bo_table=notice_01&wr_id=277" target="_blank">나루 청년참여 네트워크 동아리 지원</a></div><span class="dday normal">D-13 · 10/5</span></div><div class="info">생성형 AI·디지털장비·멘토링 — 5팀(팀 단위)</div><a class="golink" href="https://www.naroo.or.kr/bbs/board.php?bo_table=notice_01&wr_id=277" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://venture.yonsei.ac.kr/community/notice/334" target="_blank">AI First Step @ CampusTown (2학기)</a></div><span class="dday normal">선착순</span></div><a class="golink" href="https://venture.yonsei.ac.kr/community/notice/334" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c mapo-card"><div class="row1"><div class="title"><span class="tagx mapo">마포</span><a href="https://onoffmix.com/event/348335" target="_blank">나루 CX 설계 실전 (모집 재개)</a></div><span class="dday today">D-DAY · 오늘 14:00</span></div><div class="info">✅ 접수 가능 최종 확인 — <a href="https://onoffmix.com/event/348335" style="color:var(--mapo)">온오프믹스 신청</a> · 교육 9/28~29 · 02-6261-1940</div><a class="golink" href="https://www.naroo.or.kr/bbs/content.php?co_id=program_view&np_seq=1295" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c mapo-card"><div class="row1"><div class="title"><span class="tagx new">NEW</span><span class="tagx mapo">마포</span><a href="https://www.naroo.or.kr/bbs/content.php?co_id=program_view&np_seq=1303" target="_blank">나루 가격 전략 실전</a></div><span class="dday normal">D-11 · 10/2</span></div><div class="info">10/6~8 3회차 · 만 19~39세 · 02-6261-1939</div><a class="golink" href="https://www.naroo.or.kr/bbs/content.php?co_id=program_view&np_seq=1303" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c mapo-card"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://campustown.seoul.go.kr/site/main/board/sct_news/3155" target="_blank">서울영커리언스 수출입 프로젝트</a></div><span class="dday">D-2 · 9/23</span></div><div class="info">개인사업자 신청 가능 구조 · 선착순 · 010-4526-1011</div><a class="golink" href="https://campustown.seoul.go.kr/site/main/board/sct_news/3155" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125966" target="_blank">AX실증밸리조성(R&D)</a></div><span class="dday normal">D-9 · 9/30</span></div><div class="info">모빌리티 AX·에너지 분야 · 062-610-3912</div><a class="golink" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125966" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125978" target="_blank">Multi AI Agent 점프업 R&D (과제당 39억)</a></div><span class="dday normal">D-39 · 10/30</span></div><a class="golink" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125978" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178786" target="_blank">강소특구 이노테크 예비창업 사업화</a></div><span class="dday normal">D-9 · 9/30</span></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178786" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179078" target="_blank">성동구 관내 컨설팅 번들</a></div><span class="dday normal">D-9 · 9/30</span></div><div class="info">⚠ 성동구 관내 한정</div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179078" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c women-card"><div class="row1"><div class="title"><span class="tagx women">여성</span><a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125948" target="_blank">기장군 여성기업 프리마켓 (부산)</a></div><span class="dday normal">차수별</span></div><a class="golink" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125948" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c women-card"><div class="row1"><div class="title"><span class="tagx women">여성대학</span><a href="https://changup.sookmyung.ac.kr/changup/community/school-notice.do?mode=view&articleNo=122233&article.offset=0&articleLimit=50" target="_blank">숙명여대 창업보육센터 입주</a></div><span class="dday normal">상세확인</span></div><a class="golink" href="https://changup.sookmyung.ac.kr/changup/community/school-notice.do?mode=view&articleNo=122233&article.offset=0&articleLimit=50" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><a href="https://venture.yonsei.ac.kr/community/external/409" target="_blank">한국AI·로봇산업협회 연회비 면제</a></div><span class="dday normal">상세확인</span></div><a class="golink" href="https://venture.yonsei.ac.kr/community/external/409" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><a href="https://venture.yonsei.ac.kr/community/external/426" target="_blank">강원랜드 상생형 창업·벤처 지원</a></div><span class="dday normal">상세확인</span></div><a class="golink" href="https://venture.yonsei.ac.kr/community/external/426" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c women-card"><div class="row1"><div class="title"><span class="tagx women">여성</span><a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125634" target="_blank">강원 여성 초기물품 지원</a></div><span class="dday normal">예산소진시</span></div><a class="golink" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125634" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179225" target="_blank">도봉 AI 재무관리 아카데미</a></div><span class="dday normal">D-9 · 9/30</span></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179225" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179299" target="_blank">SB 스타트업 페스티벌 AI 해커톤</a></div><span class="dday normal">D-9 · 9/30</span></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179299" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179230" target="_blank">KICXUP 서울 입주 (가산)</a></div><span class="dday normal">D-9 · 9/30 18:00</span></div><div class="info">예비·개인사업자 포함 · ⚠ 유료(월 약105만원+) · 02-376-5701</div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179230" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179168" target="_blank">호서대 서울창업보육센터 입주</a></div><span class="dday normal">D-9 · 9/30</span></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179168" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179296" target="_blank">동국대 창업보육센터(서울) 입주</a></div><span class="dday normal">D-15 · 10/6</span></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179296" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179218" target="_blank">서울콜라보레이션 청년 성공창업스쿨</a></div><span class="dday normal">D-22 · 10/13</span></div><div class="info">예비창업자·소상공인 대상 명시</div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179218" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179280" target="_blank">ETRI 기술활용 신사업 모델 공모전</a></div><span class="dday normal">D-25 · 10/16</span></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179280" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179309" target="_blank">제10회 G밸리창업경진대회</a></div><span class="dday normal">D-17 · 10/8</span></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179309" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126618" target="_blank">IP기반 AI활용 지원사업</a></div><span class="dday normal">D-20 · 10/11</span></div><a class="golink" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126618" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c mapo-card"><div class="row1"><div class="title"><span class="tagx new">NEW</span><span class="tagx mapo">생활권</span><a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126492" target="_blank">서대문구 청년창업 수시 경영컨설팅</a></div><span class="dday normal">상시(수시)</span></div><a class="golink" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126492" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=177466" target="_blank">중소기업 AI훈련 컨설팅 (100% 정부지원)</a></div><span class="dday normal">D-39 · 10/30</span></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=177466" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179267" target="_blank">ICT 규제샌드박스 AI 규제확인 (무료)</a></div><span class="dday normal">D-91 · 12/21</span></div><a class="golink" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179267" target="_blank">공고 바로가기 →</a></div>
+    <div class="card c"><div class="row1"><div class="title"><span class="tagx new">NEW</span><a href="https://www.nipa.kr/home/2-2/16921" target="_blank">아태 AI 특화지구(AHAP) 조성</a></div><span class="dday">D-2 · 9/23</span></div><a class="golink" href="https://www.nipa.kr/home/2-2/16921" target="_blank">공고 바로가기 →</a></div>
+  </section>
+
+  <!-- 마포 생활권 -->
+  <section>
+    <h2>📍 마포 생활권 <span class="badge" style="background:var(--mapo)">15개 수집원 확인</span></h2>
+    <div class="card mapo-card mega-card">
+      <div class="row1"><div class="title"><span class="tagx mega">⭐최대수확</span><a href="https://naroo.or.kr/bbs/board.php?bo_table=notice_01&wr_id=276" target="_blank">MAP-O NEXT STAGE 창업 경진대회</a></div><span class="dday">10/6 18:00</span></div>
+      <div class="info"><b>생성형 AI·기술혁신 분야</b> · 개인사업자 가능 · 대상 300만원 · 서류 10/12→본선 10/28→시상 11/3</div>
+      <a class="golink" href="https://naroo.or.kr/bbs/board.php?bo_table=notice_01&wr_id=276" target="_blank">공고 바로가기 →</a>
+    </div>
+    <div class="card mapo-card">
+      <div class="row1"><div class="title">🔍 <a href="https://www.mapo.go.kr/site/main/board/edulecture/277282" target="_blank">마포 AI 디지털배움터 10월 추가모집 주시</a></div><span class="dday normal">1차 마감</span></div>
+      <div class="info">10월 과정 신청 9/14~18 선착순 마감 — 정원 미달 시 추가모집 · 02-3153-8416</div>
+      <a class="golink" href="https://www.mapo.go.kr/site/main/board/edulecture/277282" target="_blank">공고 바로가기 →</a>
+    </div>
+    <div class="card mapo-card">
+      <div class="row1"><div class="title"><a href="https://naroo.or.kr/bbs/board.php?bo_table=notice_01&wr_id=277" target="_blank">청년참여 네트워크 취·창업 동아리 지원</a></div><span class="dday normal">마감 확인</span></div>
+      <div class="info">동아리(팀) 단위 — 개인 직접 지원 아님(참고)</div>
+      <a class="golink" href="https://naroo.or.kr/bbs/board.php?bo_table=notice_01&wr_id=277" target="_blank">공고 바로가기 →</a>
+    </div>
+    <div class="card mapo-card">
+      <div class="row1"><div class="title"><a href="https://campustown.seoul.go.kr/site/main/board/sct_news/3158" target="_blank">AIE 2026 마카오 AI박람회 한국관</a></div><span class="dday normal">선착순</span></div>
+      <div class="info">⚠ 참가비 200만원+VAT 유료 — 아이템 선정 전 부적합 가능</div>
+      <a class="golink" href="https://campustown.seoul.go.kr/site/main/board/sct_news/3158" target="_blank">공고 바로가기 →</a>
+    </div>
+    <div class="card mapo-card">
+      <div class="row1"><div class="title"><a href="https://venture.yonsei.ac.kr/community/notice/336" target="_blank">영등포 청년 창업 도약 아카데미</a></div><span class="dday normal">마감 미확인</span></div>
+      <a class="golink" href="https://venture.yonsei.ac.kr/community/notice/336" target="_blank">공고 바로가기 →</a>
+    </div>
+    <div class="card mapo-card">
+      <div class="row1"><div class="title"><a href="https://venture.yonsei.ac.kr/community/notice/335" target="_blank">OASIS-2 프로그램 (글로벌창업이민센터)</a></div><span class="dday normal">마감 미확인</span></div>
+      <a class="golink" href="https://venture.yonsei.ac.kr/community/notice/335" target="_blank">공고 바로가기 →</a>
+    </div>
+    <table>
+      <thead><tr><th>구분</th><th>수집원</th><th>결과</th></tr></thead>
+      <tbody>
+        <tr><td>1순위</td><td>마포구청·나루</td><td>✅ 구청 신규 0 · <b>나루 신규 3</b>(경진대회⭐·가격전략·동아리) · CX 내려감</td></tr>
+        <tr><td>2순위</td><td>서대문·용산·은평</td><td>✅ 0 · 골목상권 1(용산 대상 확인) · ⚠ 은평 접근실패</td></tr>
+        <tr><td>3순위</td><td>서울시·SBA·캠퍼스타운</td><td>⚠ 최신 10건/지방 위주 · ✅ 캠퍼스타운 4건(영커리언스·AIE)</td></tr>
+        <tr><td>4순위</td><td>서강·홍익·연세·이화·숙명</td><td>⚠ 미갱신 · ✅ 0 · ✅ 2건 · ⚠ JS · ✅ 0</td></tr>
+        <tr><td>특별</td><td>CX·MAP-O·AI배움터</td><td>CX 내일 14:00 마감(재개 확인) · MAP-O 게시 유지 · 배움터 추가모집 미게시</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="callout">
+    <h3 style="margin:0 0 6px">⚠ 한계 고지</h3>
+    <ul class="clean">
+      <li><b>나루 CX 오늘 14:00 마감</b>: 접수 가능 확인 — 즉시 신청 권장.</li>
+      <li><b>모두의 창업 2차 철회</b>: 원문 확인 결과 9/17 종료 재게시 — 편입 취소.</li>
+      <li><b>부분 크롤링</b>: bizinfo·nipa p30 캡 — 20일치 후미 공고 누락 가능성.</li>
+      <li><b>링크 품질 게이트 PASS</b>: 43개 전부 원문 URL.</li>
+    </ul>
+  </div>
+
+  <footer>
+    직전 보고서: <a href="../지원사업조사_여성블록체인AI창업자_20260922/보고서.html" style="color:var(--a)">2026-09-22</a><br>
+    결정론적 파이프라인: screen → gate(<b>PASS</b>) → render + 링크 품질 게이트(<b>PASS</b>)<br>
+    다음 조사: 2026-09-24 08:00
+  </footer>
+
+</div>
+<!-- IR_DIRECT_LINKS_START -->
+<style>
+.ir-direct-links{max-width:980px;margin:24px auto;padding:20px;border:1px solid #dfe3ea;border-radius:16px;background:#fff;color:#1f2330;font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif}
+.ir-direct-links h2{margin:0 0 6px;font-size:21px}
+.ir-direct-links p{margin:0 0 14px;color:#5a6275;font-size:14px}
+.ir-direct-link{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:8px 0;padding:13px 14px;border:1px solid #e6e8ee;border-radius:12px;color:#1f2330;text-decoration:none;background:#fafbfc}
+.ir-direct-link span{font-weight:700;line-height:1.4}
+.ir-direct-link strong{flex:0 0 auto;color:#1a73e8;font-size:12px}
+.ir-direct-link:active{transform:scale(.99)}
+@media(max-width:600px){.ir-direct-links{margin:18px 12px;padding:15px}.ir-direct-link{align-items:flex-start;flex-direction:column;gap:5px}}
+</style>
+<section class="ir-direct-links" aria-labelledby="ir-direct-links-title">
+  <h2 id="ir-direct-links-title">🔗 모든 지원사업 원문 바로가기</h2>
+  <p>사업명을 누르면 해당 기관의 실제 공고·신청 페이지가 새 창에서 열립니다.</p>
+    <a class="ir-direct-link" href="https://naroo.or.kr/bbs/board.php?bo_table=notice_01&amp;wr_id=276" target="_blank" rel="noopener noreferrer"><span>[A] 2026 마포 청년 창업 아이디어 경진대회 (MAP-O NEXT STAGE)</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179303" target="_blank" rel="noopener noreferrer"><span>[B] 2026년 블록체인 기업성장허브 입주기업 모집</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126309" target="_blank" rel="noopener noreferrer"><span>[B] 2026년 AI 창업 경진대회 참가자 모집 공고</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179236" target="_blank" rel="noopener noreferrer"><span>[B] 제3회 AI 및 기술기반 창업 트렌드 세미나 (멀티모달·에이전트 AI)</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179187" target="_blank" rel="noopener noreferrer"><span>[B] 2026년 하반기 서울창업허브 성수 입주기업 모집</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179289" target="_blank" rel="noopener noreferrer"><span>[B] 2026년 하반기 경기도여성창업보육센터 입주기업 모집 연장공고</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179270" target="_blank" rel="noopener noreferrer"><span>[B] 「서울소셜벤처허브」2026년 &#x27;허브 멤버스&#x27; 입주사 추가모집 공고</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179035" target="_blank" rel="noopener noreferrer"><span>[B] 2026년도 한국도로공사 청년 AI 스타트업 지원 시범사업</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179012" target="_blank" rel="noopener noreferrer"><span>[B] 코리아 핀테크 위크 2026 핀테크 스타트업 1:1 투자 밋업</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://venture.yonsei.ac.kr/community/external/406" target="_blank" rel="noopener noreferrer"><span>[B] 코리아 핀테크 위크 2026 아이디어 공모전·전시 참가기업 모집</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.mapo.go.kr/site/main/board/notice/277578" target="_blank" rel="noopener noreferrer"><span>[B] 2026년 사회연대경제 청년 일경험 시범사업 참여청년 모집</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://campustown.seoul.go.kr/site/main/board/sct_news/3114" target="_blank" rel="noopener noreferrer"><span>[B] 2026 위치정보 맞춤형 컨설팅 참여기업 모집 (AI전환 분야 포함)</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://naroo.or.kr/bbs/content.php?co_id=program_view&amp;np_seq=1293" target="_blank" rel="noopener noreferrer"><span>[C] 마포청년창업취업지원센터 나루 9월 창업프로그램</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126605" target="_blank" rel="noopener noreferrer"><span>[C] [부산] 2026년 블록체인 기업 글로벌(싱가포르) 사업화 지원사업 참가기업 추가모집 공고</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179143" target="_blank" rel="noopener noreferrer"><span>[B] 2026년 여성과학기술인 R&amp;D 경력복귀 지원사업 하반기 모집 공고</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.nipa.kr/home/2-2/16921" target="_blank" rel="noopener noreferrer"><span>[C] 2026년 아태 AI 특화지구(AHAP) 조성 사업 공고</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.naroo.or.kr/bbs/content.php?co_id=program_view&amp;np_seq=1303" target="_blank" rel="noopener noreferrer"><span>[C] [창업] 창업가를 위한 가격 전략 실전</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.naroo.or.kr/bbs/board.php?bo_table=notice_01&amp;wr_id=277" target="_blank" rel="noopener noreferrer"><span>[C] 청년참여 네트워크 취·창업 동아리 맞춤 지원사업</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://venture.yonsei.ac.kr/community/notice/334" target="_blank" rel="noopener noreferrer"><span>[C] AI First Step @ CampusTown (2026·2학기)</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://campustown.seoul.go.kr/site/main/board/sct_news/3155" target="_blank" rel="noopener noreferrer"><span>[C] 서울영커리언스 챌린지: 해외영업 수출입 프로젝트 참여기업</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125966" target="_blank" rel="noopener noreferrer"><span>[C] 2026년 AX실증밸리조성(R&amp;D) 신규지원 대상과제</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125978" target="_blank" rel="noopener noreferrer"><span>[C] 중소제조 특화 Multi AI Agent 개발(R&amp;D) 점프업 Track</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=178786" target="_blank" rel="noopener noreferrer"><span>[C] 2026년 강소특구 이노테크 발굴 예비창업자 사업화 지원</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179078" target="_blank" rel="noopener noreferrer"><span>[C] [성동구 관내기업] 모두의 창업·정부R&amp;D·베트남 진출 컨설팅</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125948" target="_blank" rel="noopener noreferrer"><span>[C] [부산] 기장군 다시미마켓(여성기업 프리마켓) 참여기업 모집</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://changup.sookmyung.ac.kr/changup/community/school-notice.do?mode=view&amp;articleNo=122233&amp;article.offset=0&amp;articleLimit=50" target="_blank" rel="noopener noreferrer"><span>[C] 숙명여자대학교 창업보육센터 입주기업 모집 공고</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://venture.yonsei.ac.kr/community/external/409" target="_blank" rel="noopener noreferrer"><span>[C] 한국AI·로봇산업협회 스타트업 연회비 면제</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://venture.yonsei.ac.kr/community/external/426" target="_blank" rel="noopener noreferrer"><span>[C] 강원랜드 상생형 창업·벤처기업 지원사업 (한국생산성본부)</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000125634" target="_blank" rel="noopener noreferrer"><span>[C] [강원] 2026년 지역 여성 창업기업 초기물품 지원사업</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179225" target="_blank" rel="noopener noreferrer"><span>[C] [도봉구청년창업센터] 스케일업 아카데미: AI 재무관리 노하우</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179299" target="_blank" rel="noopener noreferrer"><span>[C] 2026 제4회 SB 스타트업 네트워킹 페스티벌: AI 기반 지역문제 해결 해커톤 (~9/30)</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179230" target="_blank" rel="noopener noreferrer"><span>[C] 2026년 9월 KICXUP 서울 입주기업 모집공고</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179168" target="_blank" rel="noopener noreferrer"><span>[C] 호서대학교 서울창업보육센터 신규입주모집 공고</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179296" target="_blank" rel="noopener noreferrer"><span>[C] 동국대학교 창업보육센터(서울) 신규 입주기업 모집 공고</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179218" target="_blank" rel="noopener noreferrer"><span>[C] 2025년 제1기 서울콜라보레이션 청년 성공창업스쿨 (청년창업·사회적경제·예비창업자)</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179280" target="_blank" rel="noopener noreferrer"><span>[C] ETRI 기술활용 신사업 모델 공모전</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179309" target="_blank" rel="noopener noreferrer"><span>[C] 2026 제10회 G밸리창업경진대회 참가기업 모집</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126618" target="_blank" rel="noopener noreferrer"><span>[C] 2026년 IP기반 AI활용 지원사업 참여기업 모집 공고</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126492" target="_blank" rel="noopener noreferrer"><span>[C] [서울] 서대문구 2026년 청년창업기업 및 사회연대경제기업 수시 전문상담 경영컨설팅 신청 기업 모집</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=177466" target="_blank" rel="noopener noreferrer"><span>[C] 2026 중소기업AI훈련 맞춤 컨설팅 100% 정부지원 프로그램 참여기업 모집</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=179267" target="_blank" rel="noopener noreferrer"><span>[C] [무료제공] ICT 규제샌드박스 AI 기반 규제확인 서비스</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126681" target="_blank" rel="noopener noreferrer"><span>[C] [대구] 2026년 국외 블록체인 시장진출 지원사업 (Singapore FINTECH FESTIVAL 2026)</span><strong>공고 바로가기 ↗</strong></a>
+    <a class="ir-direct-link" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126731" target="_blank" rel="noopener noreferrer"><span>[C] Plug in : Tokyo #15 참여 스타트업 모집</span><strong>공고 바로가기 ↗</strong></a>
+</section>
+<!-- IR_DIRECT_LINKS_END -->
+</body>
+</html>
