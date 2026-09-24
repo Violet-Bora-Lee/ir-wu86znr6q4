@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-23 17:02 KST",
+  "generated_at": "2026-09-24 09:01 KST",
   "items": [
     {
       "title": "2026년 4분기 공공조달시장 진출지원 컨설팅 희망기업 모집",
@@ -137,48 +137,6 @@
       "deadline_iso": "",
       "source": "기업마당 공식 상세페이지 및 첨부 스타트업 원스톱 지원센터 서비스 안내문 PDF 전체 확인, 창조경제혁신센터 출처 원문 HTTP 200 확인·우선 게시. 별도 이미지형 심화상담 홍보 PDF는 텍스트 추출 불가",
       "updated_at": "2026-09-21T17:02:14+09:00"
-    },
-    {
-      "title": "2026년 중소기업 ESG 지원사업 대상기업 공고",
-      "organization": "ketep.re.kr",
-      "official_url": "https://ketep.re.kr/board/view?menuId=MENU002080100000000&boardId=BOARD00022&schType=0&schText=&boardStyle=&categoryId=&continent=&country=&pageNum=1&rowCnt=10&no1=1&titleId=SCiGHTpPID",
-      "id": "https://ketep.re.kr/board/view?menuId=MENU002080100000000&boardId=BOARD00022&schType=0&schText=&boardStyle=&categoryId=&continent=&country=&pageNum=1&rowCnt=10&no1=1&titleId=SCiGHTpPID",
-      "eligibility_timing": "조건부/확인 필요",
-      "priority": "조건부",
-      "fit": "조건부 확인 / 중소기업 대상이며 창업기업 우대. 개인사업자·무고용을 명시적으로 배제하는 조건은 확인되지 않음. / 성과공유제 참여 필수. 유효 중소기업확인서, 체납·참여제한 등 제외사유 확인. 2025-09 개업으로 최근2개년 재무 평가자료 제출방식 문의 필요. 현장방문 컨설팅·현장실사 포함: 비상주 공유오피스에서 참여 가능한지 확인 필요. / 여성 개인 SW/AI·콘텐츠 사업자의 역량·판로·경영 활동과 연결 가능하나 아래 개별 조건 우선 / 중소기업확인서 필수. 무고용 개인사업자 배제 문구는 확인되지 않으나 성과공유제 참여 필수, 체납 등 제외요건 심사. 인증 보유 가정 안 함.",
-      "benefits": "6개사, 기업당 400만원 이내 ESG 진단·교육·현장 컨설팅 및 수준확인서. 현금지원 아님. / 공고상 별도 자부담 명시 없음; 비용 면제 확약 아님. / 6개사, 기업당 400만원 이내 ESG 진단·교육·현장컨설팅 및 확인서; 현금지원으로 해석 금지 / 자부담 명시 확인 못함",
-      "deadline": "2026-09-23T18:00:00+09:00 / 2026-09-23 18:00 KST",
-      "apply": "02-724-1164에 개인·무고용 사업자 성과공유제 참여 및 짧은 재무이력 처리 확인. / 중소기업확인서와 성과공유제 적용 가능성을 수행기관에 확인한 뒤 신청서·계획서 준비",
-      "documents": "사업자등록증, 중소기업확인서, 참여신청서·정보동의서·3페이지 이내 계획서; 해당 시 창업기업 인증서 / 사업자등록증, 유효 중소기업확인서, 참여신청서·정보활용동의서·참여계획서; 우대 인증 해당시",
-      "legal_note": "",
-      "source": "SMES 28개 시스템 선별 검토 · 공식 원문",
-      "updated_at": "2026-09-18",
-      "deadline_iso": "2026-09-23",
-      "official_aliases": [
-        "https://ketep.re.kr/board/view?boardId=BOARD00022&menuId=MENU002080100000000&titleId=SCiGHTpPID",
-        "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126575",
-        "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126575&schEndAt=N"
-      ]
-    },
-    {
-      "title": "EU CRA(사이버복원력법) 대응 전략 무료 웨비나",
-      "organization": "ksa.or.kr",
-      "official_url": "https://ksa.or.kr/ksa_kr/835/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa3NhX2tyJTJGMTkwJTJGMTU5MDY5OCUyRmFydGNsVmlldy5kbyUzRg%3D%3D",
-      "id": "https://ksa.or.kr/ksa_kr/835/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa3NhX2tyJTJGMTkwJTJGMTU5MDY5OCUyRmFydGNsVmlldy5kbyUzRg%3D%3D",
-      "eligibility_timing": "조건부/확인 필요",
-      "priority": "조건부",
-      "fit": "검토 가치 / SW제품의 EU 진출과 보안 설계·취약점 대응 요구 학습에 관련 / 대상은 EU수출 디지털제품 제조기업 및 관련 실무자 등. 사용자의 EU수출실적은 미확인. 교육 관심 참석 가능 여부 확인; 인증이나 지원금 아님.",
-      "benefits": "온라인 무료 EU CRA 총괄 대응·보안요건·제조사 의무 설명 / 무료",
-      "deadline": "2026-09-23 (시간 미표기), 선착순; 행사9/30 14:00~16:00 KST",
-      "apply": "오늘 마감이므로 KSA 02-6240-5634에 개인 SW사업자 참석·잔여석 확인. 신청은 사용자 직접 수행.",
-      "documents": "['사전등록 폼; 별도 증빙서류 미표기']",
-      "legal_note": "",
-      "source": "SMES 28개 시스템 선별 검토 · 공식 원문",
-      "updated_at": "2026-09-23T09:15:51.667030+09:00",
-      "deadline_iso": "2026-09-23",
-      "official_aliases": [
-        "https://ksa.or.kr/ksa_kr/835/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa3NhX2tyJTJGMTkwJTJGMTU5MDY5OCUyRmFydGNsVmlldy5kbyUzRg%3D%3D"
-      ]
     },
     {
       "title": "2026년 12기 M&A 이러닝 교육 신청 안내",
