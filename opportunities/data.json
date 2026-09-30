@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29 17:01 KST",
+  "generated_at": "2026-09-30 09:01 KST",
   "items": [
     {
       "title": "2026년 4분기 공공조달시장 진출지원 컨설팅 희망기업 모집",
@@ -154,44 +154,6 @@
       "deadline_iso": "",
       "source": "기업마당 공식 상세페이지 및 첨부 스타트업 원스톱 지원센터 서비스 안내문 PDF 전체 확인, 창조경제혁신센터 출처 원문 HTTP 200 확인·우선 게시. 별도 이미지형 심화상담 홍보 PDF는 텍스트 추출 불가",
       "updated_at": "2026-09-21T17:02:14+09:00"
-    },
-    {
-      "title": "2026년 디지털정부 해외진출 컨설턴트 2차 경력자 과정 교육생 모집",
-      "organization": "행정안전부·한국지능정보사회진흥원(NIA)",
-      "eligibility_timing": "조건부/확인 필요",
-      "fit": "공공·민간의 디지털정부·ICT 분야 경력자가 교육대상이며, 디지털정부·AI·ICT·국제개발협력·컨설팅을 다루므로 모던웹연구소의 SW·웹·AI 개발 및 기술교육 업무와 연관성이 큽니다. 다만 제공된 공식 안내만으로는 요구 경력기간, 개인사업자 대표의 경력 인정방식과 선발기준을 확정할 수 없어 신청 전 모집안내문 확인이 필요합니다.",
-      "benefits": "교육비 전액 지원(무료), 디지털·AI정부, ICT·AI, 국제개발협력 및 컨설팅 분야 교육, 수료기준 충족 시 행정안전부·NIA 명의 국문·영문 수료증 발급 및 우수 교육생 시상. 교육은 2026년 10월 12일부터 23일까지 서울 교육장과 Zoom 온라인 2일을 병행합니다.",
-      "deadline": "2026년 9월 29일 오후 6시까지",
-      "apply": "NIA 공식 안내에 연결된 구글폼(https://forms.gle/LGtaeMi9RyAm5Mqv9) 온라인 접수",
-      "official_url": "https://www.nia.or.kr/site/nia_kor/ex/bbs/View.do?cbIdx=99835&bcIdx=29899&parentSeq=29899",
-      "id": "https://www.nia.or.kr/site/nia_kor/ex/bbs/View.do?cbIdx=99835&bcIdx=29899&parentSeq=29899",
-      "priority": "조건부",
-      "legal_note": "교육대상은 개인의 공공·민간 디지털정부·ICT 분야 경력을 기준으로 안내되어 법인전환이 자격을 자동으로 만들지 않습니다. 현재 개인사업자 대표의 프로젝트·용역 경력이 인정되는지 확인하는 것이 우선이며, 법인전환 후 신청하더라도 2026년 9월 29일 오후 6시 전에 법인설립등기와 법인사업자등록을 마쳐야 법인 재직 경력을 증명할 수 있습니다. 이 경우 법인등기부등본·법인사업자등록증과 법인 명의 경력증빙이 필요할 수 있고, 개인사업자의 업력·실적 승계를 가정하지 않습니다.",
-      "documents": "구글폼 신청사항과 첨부 모집안내문에서 요구하는 ICT·디지털정부 분야 경력 증빙 및 지원서류를 확인해야 합니다. 개인사업자 사업자등록증, 프로젝트·재직·용역 경력증명 또는 Young Frontier 과정 수료증의 제출 필요 여부는 모집안내문 확인 필요",
-      "deadline_iso": "2026-09-29",
-      "source": "한국지능정보사회진흥원 공식 안내",
-      "updated_at": "2026-08-25T13:01:47+09:00"
-    },
-    {
-      "title": "[전국] 2026년 경기 가상융합산업 전문가 포럼 개최",
-      "organization": "www.gcon.or.kr",
-      "official_url": "https://www.gcon.or.kr/gcon/bbs/B0000002/view.do?nttId=12352&menuNo=200062&pageIndex=1",
-      "id": "https://www.gcon.or.kr/gcon/bbs/B0000002/view.do?nttId=12352&menuNo=200062&pageIndex=1",
-      "eligibility_timing": "조건부/확인 필요",
-      "priority": "조건부",
-      "fit": "현재 검토 가능 / 여성 개인 SW/AI·콘텐츠 사업자의 역량·판로·경영 활동과 연결 가능하나 아래 개별 조건 우선 / 10/1 14:00~17:30 광교비즈니스센터 11층 경기XR센터 이벤트홀 현장 행사. 사전신청 필요, 주차 지원 없음.",
-      "benefits": "무료 AI/XR 전문가 강연 및 네트워킹 / 무료; 주차·교통 개인부담",
-      "deadline": "2026-09-29, 마감시간 미명시",
-      "apply": "참석 일정 검토 후 공식 포스터 QR 신청 안내 확인",
-      "documents": "사전 참가신청, 별도 기업 증빙 명시 없음",
-      "legal_note": "",
-      "source": "SMES 28개 시스템 선별 검토 · 공식 원문",
-      "updated_at": "2026-09-18T09:03:25.781216+09:00",
-      "deadline_iso": "2026-09-29",
-      "official_aliases": [
-        "https://www.bizinfo.go.kr/sie/siea/selectSIEA430Detail.do?area=all&eventInfoId=EVEN_000000000069456",
-        "https://www.gcon.or.kr/gcon/bbs/B0000002/view.do?menuNo=200062&nttId=12352"
-      ]
     },
     {
       "title": "2026 인도 BTS(Bengaluru Tech Summit) 전시회 참가 기업 모집",
