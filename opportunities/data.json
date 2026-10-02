@@ -1409,6 +1409,26 @@
       "updated_at": "2026-09-21T17:02:14+09:00"
     },
     {
+      "title": "2026년 중소기업 정책자금 융자계획 4차 개정 — AI·에듀테크 소상공인 예외 조건 확인",
+      "organization": "www.kosmes.or.kr",
+      "official_url": "https://www.kosmes.or.kr/nsh/SH/NTS/SHNTS001F0.do?seqNo=6107152",
+      "id": "https://www.kosmes.or.kr/nsh/SH/NTS/SHNTS001F0.do?seqNo=6107152",
+      "eligibility_timing": "조건부/확인 필요",
+      "priority": "조건부",
+      "fit": "조건부 확인 — 혁신성장분야 영위 증빙·융자심사 필요 / 첨부공고는 소상공인 원칙제외와 혁신성장·초격차·신산업 영위기업 예외를 함께 명시. 개편 참고자료에 LLM·AI에이전트·AI콘텐츠·에듀테크 등이 있어 실제 관련서비스를 영위하는 SW/AI사업자는 분야해당여부 상담 가능. / 무고용 소상공인은 원칙 제외. 940926 세무업종코드나 AI교육이라는 명칭만으로 예외 인정되지 않으며 실제 영위 분야·사업별요건·신용/세금/제외업종 심사 필요. 수출실적 등 자금별 증빙은 별도 확인 필요. 거제·통영 재해지원1.5%를 마포사업자 혜택으로 가정하지 않음. 법인전환 필요/업력승계 가정하지 않음.",
+      "benefits": "적격 사업별 시설·운전자금 융자. 4차개정은 긴급경영안정1000억원 증액·혁신성장분야 개편 등 반영 / 보조금 아닌 상환의무가 있는 대출; 금리는 자금종류·신용/담보·우대조건에 따라 달라지며 개인 적용금리 미확정",
+      "deadline": "연간 예산 소진 시까지; 지역별 접수일정 별도. 목록의 연말 일자는 확정 신청마감으로 해석하지 않음.",
+      "apply": "1811-3655에 실제 SW/AI개발·교육 사업내용과 소상공인 예외해당 여부를 확인한 뒤 서울 접수일정 확인. 이번 실행에서는 상담·신청하지 않음.",
+      "documents": "각 융자사업별 신청서 및 증빙서류, 상담 이후 별도 안내. 실제 AI/에듀테크 사업 증빙 준비 권장(확정 필수서류 아님).",
+      "legal_note": "",
+      "source": "SMES 28개 시스템 선별 검토 · 공식 원문",
+      "updated_at": "2026-10-02T09:27:49.922072+09:00",
+      "deadline_iso": "",
+      "official_aliases": [
+        "https://www.kosmes.or.kr/nsh/SH/NTS/SHNTS001F0.do?seqNo=6107152"
+      ]
+    },
+    {
       "title": "[서울] 2026년 중소기업육성자금 융자지원 변경계획",
       "organization": "www.seoul.go.kr",
       "official_url": "https://www.seoul.go.kr/news/news_notice.do?bbsNo=277&nttNo=465395&cntPerPage=10&curPage=1",
