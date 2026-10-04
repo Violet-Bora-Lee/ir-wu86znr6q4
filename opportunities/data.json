@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-03",
+  "generated_at": "2026-10-04",
   "items": [
     {
       "title": "2026년 한양대학교 ERICA 창업보육센터 입주기업 모집 공고",
@@ -874,6 +874,26 @@
       "updated_at": "2026-10-01T17:03:34+09:00"
     },
     {
+      "title": "[전국] 2026년 5회차 서울디자인런 창업역량강화 프로그램 안내(쓰레기를 예술로, 제로웨이스트를 동네로)",
+      "organization": "seouldesign.or.kr",
+      "official_url": "https://seouldesign.or.kr/?menuno=17&siteno=1&boardno=19&cates=131&act=view&bbsno=30287",
+      "id": "https://seouldesign.or.kr/?menuno=17&siteno=1&boardno=19&cates=131&act=view&bbsno=30287",
+      "eligibility_timing": "조건부/확인 필요",
+      "priority": "조건부",
+      "fit": "조건부 확인 / 서울 초기 창업자의 브랜드 기획 및 전문가 멘토링 간접 경로 / 브랜딩 창업에 관심 있는 누구나. 순환경제/새활용 중심이므로 AI 교육·콘텐츠 사업 적용성 확인. 후속 투자나 멘토 선정 보장 아님.",
+      "benefits": "브랜딩 강연·네트워킹, 참여 창업자 전문가 1:1 멘토링 매칭 및 후속 데모데이 연계 / 공개 원문·포스터에 참가비 명시 없음",
+      "deadline": "원문 선착순 마감; 포털 2026-10-14(시각 미명시), 행사 10-15 15:00~17:30 KST",
+      "apply": "서울디자인재단 02-2153-0431에 잔여석·멘토링 참여조건 확인 후 사용자가 신청.",
+      "documents": "온라인 신청폼; 공개 안내에 별도 증빙서류 미명시",
+      "legal_note": "",
+      "source": "SMES 28개 시스템 선별 검토 · 공식 원문",
+      "updated_at": "2026-10-04T09:22:49.819832+09:00",
+      "deadline_iso": "2026-10-14",
+      "official_aliases": [
+        "https://seouldesign.or.kr?act=view&bbsno=30287&boardno=19&cates=131&menuno=17&siteno=1"
+      ]
+    },
+    {
       "title": "부산 AX WAVE 2026 — 첨단 물류 AI 전환 추진전략",
       "organization": "ssup.kosmes.or.kr",
       "official_url": "https://ssup.kosmes.or.kr/v1/app/common/attach/download?path=/data/ssup/uploads/contents/editor/temp/20261001/1409021/1409021_7bd52528.jpg",
@@ -1179,6 +1199,26 @@
       "updated_at": "2026-09-01T09:01:55+09:00"
     },
     {
+      "title": "2026년 청년기업인상 포상 신청 공고",
+      "organization": "www.msit.go.kr",
+      "official_url": "https://www.msit.go.kr/bbs/view.do?sCode=user&mId=310&mPid=121&pageIndex=&bbsSeqNo=96&nttSeqNo=3186622&searchOpt=ALL&searchTxt=",
+      "id": "https://www.msit.go.kr/bbs/view.do?sCode=user&mId=310&mPid=121&pageIndex=&bbsSeqNo=96&nttSeqNo=3186622&searchOpt=ALL&searchTxt=",
+      "eligibility_timing": "조건부/확인 필요",
+      "priority": "조건부",
+      "fit": "조건부 확인 / 초기 ICT/SW 대표의 포상 경로; 이전 개발경력 합산 예외가 있어 업력만으로 제외하지 않음 / 공고일 만39세 이하·창업7년 이내 ICT기업 대표, 수공기간3년 이상. 과거 정보통신 분야 근로경력 합산 가능하나 인정기간 증빙 필요. 상시근로자 없으면 근로자수 증빙 제출 생략 가능. 산재확인·신생기업 재무증빙 범위 및 포상제한 확인 필요. 동일 공적 이중표창 불가.",
+      "benefits": "청년 ICT기업인 과학기술정보통신부장관 개인표창 / 신청비 명시 없음; 우편 등 비용 별도",
+      "deadline": "2026-10-26 16:00 KST; 원본 도착 마감 10-26/10-30 문서간 상충, 10-26 이전 확인",
+      "apply": "02-6953-1658에 이전 ICT경력 합산, 산재·재무 대체자료, 원본 도착일 상충을 확인하고 공적 증빙부터 정리.",
+      "documents": "신청서·공적조서·동의서·기업현황·이력서·사업자등록·납세·재무·산재 및 경력/성과 증빙. 상시근로자 없으면 근로자수 증빙 생략 가능. 한글파일 제출과 원본 제출 방식은 담당자 재확인.",
+      "legal_note": "",
+      "source": "SMES 28개 시스템 선별 검토 · 공식 원문",
+      "updated_at": "2026-10-04T09:22:49.819832+09:00",
+      "deadline_iso": "2026-10-26",
+      "official_aliases": [
+        "https://www.msit.go.kr/bbs/view.do?bbsSeqNo=96&mId=310&mPid=121&nttSeqNo=3186622&sCode=user&searchOpt=ALL"
+      ]
+    },
+    {
       "title": "제조데이터를 활용한 AI 기반 스마트공장 구축 실무 (2026년 10월 2기)",
       "organization": "ssup.kosmes.or.kr",
       "official_url": "https://ssup.kosmes.or.kr/apply/lrn/107891?distCrsSlno=1051921&tabIndex=0&page=1",
@@ -1236,6 +1276,26 @@
       "deadline_iso": "2026-10-28",
       "official_aliases": [
         "https://biz.kista.re.kr/epcenter/news01D.do?no=6686"
+      ]
+    },
+    {
+      "title": "2026년 정보통신 중소기업 발전 유공자 포상 계획 공고",
+      "organization": "www.msit.go.kr",
+      "official_url": "https://www.msit.go.kr/bbs/view.do?sCode=user&mId=310&mPid=121&pageIndex=&bbsSeqNo=96&nttSeqNo=3186621&searchOpt=ALL&searchTxt=",
+      "id": "https://www.msit.go.kr/bbs/view.do?sCode=user&mId=310&mPid=121&pageIndex=&bbsSeqNo=96&nttSeqNo=3186621&searchOpt=ALL&searchTxt=",
+      "eligibility_timing": "조건부/확인 필요",
+      "priority": "조건부",
+      "fit": "조건부 확인 / SW개발 개인사업자 대표의 공적 포상; 업력과 개인 수공기간을 구분하여 조건부 검토 / ICT 중소벤처기업 대표·수공기간3년 이상. 과거 정보통신 근로경력 합산 가능하나 경력 미확인. 무고용·설립전 재무자료 대체와 공적조서 조사자 확인 필요. 고용/수출실적 평가상 불리할 수 있음. 동일 공적 이중표창 여부 및 청년기업인상과의 중복신청 처리도 확인 필요.",
+      "benefits": "ICT 중소기업 발전 유공자 과학기술정보통신부장관 개인표창 / 신청비 명시 없음; 우편 등 비용 별도",
+      "deadline": "2026-10-30 16:00 KST; 우편 소인/도착 문구 상충, 도착 기준 사전확인",
+      "apply": "벤처기업협회 02-6331-7032/7036에 경력합산, 무고용·신생기업 증빙대체, 상충하는 이메일/우편 기준 확인.",
+      "documents": "신청서·공적조서·동의서·기업현황·공적약술서·이력서·사업자등록·납세·재무·고용·산재·경력 및 해당 수출/지식재산 증빙",
+      "legal_note": "",
+      "source": "SMES 28개 시스템 선별 검토 · 공식 원문",
+      "updated_at": "2026-10-04T09:22:49.819832+09:00",
+      "deadline_iso": "2026-10-30",
+      "official_aliases": [
+        "https://www.msit.go.kr/bbs/view.do?bbsSeqNo=96&mId=310&mPid=121&nttSeqNo=3186621&sCode=user&searchOpt=ALL"
       ]
     },
     {
