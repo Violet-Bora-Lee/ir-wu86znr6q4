@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-05 17:01 KST",
+  "generated_at": "2026-10-06 09:01 KST",
   "items": [
     {
       "title": "2026년 울산 스타트업 페스타(USF) TOP 5 참가자 모집",
@@ -188,47 +188,6 @@
       "deadline_iso": "",
       "source": "NIPA 공식 공지사항 2026-10-02 게시. 이번 실행에서 원문 HTTP 200 및 본문 신청방법·대상·영어 상담·조기 종료·문의처 확인",
       "updated_at": "2026-10-02T13:01:48+09:00"
-    },
-    {
-      "title": "2026년 한양대학교 ERICA 창업보육센터 입주기업 모집 공고",
-      "organization": "hbi.hanyang.ac.kr",
-      "official_url": "https://hbi.hanyang.ac.kr/board/notice.php?ptype=view&idx=28840&page=&code=notice",
-      "id": "https://hbi.hanyang.ac.kr/board/notice.php?ptype=view&idx=28840&page=&code=notice",
-      "eligibility_timing": "조건부/확인 필요",
-      "priority": "조건부",
-      "fit": "조건부 확인 / 2025-09-22 개업 SW/AI 사업자 업력·사업분야 연결; 이전의사 미확인 / 개인사업자·입주계약 전 창업 3년 미만 허용. 안산 실제 입주 필요. 기타 서비스업 등 제외분류와 업종940926 인정 여부 확인. 여성기업확인서 보유 가정 안 함. / 창업 3년 미만 개인사업자 허용, 빅데이터·AI·ICT 분야 및 여성 우대 문구로 사업·업력 연관. / 임대료 2만원/평·월, 관리비 1.5만원/평·월(110평은1.6만원), VAT별도; 보증금 임대·관리비12개월분, 현금기부 별도문의. 포털의 판교 위치는 기관원문의 안산 센터 주소와 충돌; 위치·실입주 조건 반드시 확인. 신청서 날짜 2025년 잔존.",
-      "benefits": "한양대 ERICA AI·ICT 창업공간, 기본 3년·연평가 최장 5년; 여성기업 우대 / 3.3㎡당 월임대료 2만원+관리비 1.5만원(VAT별도;110평 관리비1.6만원); 보증금12개월분, 현금기부 별도 문의 / 보육공간 10/15/20/110평, 기본3년·평가 후 최장5년",
-      "deadline": "2026-10-05 23:59 KST",
-      "apply": "031-400-4975~6에 업종분류·현금기부 조건·여성 우대 증빙 확인 / 031-400-4975~4976에 위치·현금기부·실입주 및 업종940926 적용 확인, 신청서·사업계획서·사업자등록증 준비.",
-      "documents": "입주신청서·사업계획서·사업자등록증·해당 실적자료, 발표자료",
-      "legal_note": "",
-      "source": "SMES 28개 시스템 선별 검토 · 공식 원문",
-      "updated_at": "2026-09-19T09:03:54.120457+09:00",
-      "deadline_iso": "2026-10-05",
-      "official_aliases": [
-        "https://hbi.hanyang.ac.kr/board/notice.php?code=notice&idx=28840&ptype=view",
-        "https://www.bizinfo.go.kr/biz/bizb/selectBIZB200Detail.do?mvnEntrprsRcritPblancId=MVNP_000000000000657"
-      ]
-    },
-    {
-      "title": "LLM 학습·추론 최적화 개론 — HPC 이노베이션 허브",
-      "organization": "edu.openhpc.or.kr",
-      "official_url": "https://edu.openhpc.or.kr/openhpc/educ/offline/offlineDetailView.do?offlineId=OFL000000000000135",
-      "id": "https://edu.openhpc.or.kr/openhpc/educ/offline/offlineDetailView.do?offlineId=OFL000000000000135",
-      "eligibility_timing": "조건부/확인 필요",
-      "priority": "조건부",
-      "fit": "높음 / LLM API/오픈소스 모델 서비스 개발자의 최적화 실무에 직접 관련 / LLM API 개발 경험 또는 모델개발 중급 이수·상응 기초역량 대상. 판교3일 현장참석 필요. 40명 정원·잔여석 미확인. 개강3일전 이후 취소/무단결석 제한 안내 확인 필요.",
-      "benefits": "판교 HPC 교육실 무료21시간, 교재·중식 제공 / 무료",
-      "deadline": "2026-10-05 (시간 미표기); 교육10/6~8 10:00~17:00 KST",
-      "apply": "현재 LLM 개발경력과10/6~8 판교 참석 가능 여부 확인 후 운영처에 잔여석 문의.",
-      "documents": "['교육 사이트 수강신청; 별도 증빙서류 미표기']",
-      "legal_note": "",
-      "source": "SMES 28개 시스템 선별 검토 · 공식 원문",
-      "updated_at": "2026-09-23T09:15:51.667030+09:00",
-      "deadline_iso": "2026-10-05",
-      "official_aliases": [
-        "https://edu.openhpc.or.kr/openhpc/educ/offline/offlineDetailView.do?offlineId=OFL000000000000135"
-      ]
     },
     {
       "title": "2026년 4분기 협업기업 신청 공고",
