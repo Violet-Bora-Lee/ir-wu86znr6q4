@@ -1,24 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-07 17:01 KST",
+  "generated_at": "2026-10-08 09:01 KST",
   "items": [
-    {
-      "title": "2026년 울산 스타트업 페스타(USF) TOP 5 참가자 모집",
-      "organization": "울산광역시·울산창조경제혁신센터",
-      "eligibility_timing": "현재 신청 가능",
-      "fit": "지역제한 없이 공고일 기준 창업 7년 이내 기술형 창업기업을 모집하며 개인사업자를 명시적으로 인정합니다. 2025년 9월 22일 개업한 서울 마포구 개인사업자는 업력 범위에 들고, AI·웹·SW 기반 자체 서비스로 도전할 수 있습니다. 최소고용 요건은 공고에 없습니다. 중소기업·창업 인정, 과거 수상과 제외업종 제한은 확인해야 하며 결선은 11월 6일 대표자 IR 발표가 원칙입니다.",
-      "benefits": "결선 5개팀에 총상금 1,500만원: 대상 1팀 500만원, 최우수상 2팀 각 300만원, 우수상 2팀 각 200만원. 상장·후속지원 안내가 있으나 후속지원의 구체적 내용은 확인 필요. 주관기관 추천 시 서류평가 가점 2점",
-      "deadline": "2026년 10월 7일까지(마감시각은 접수처 확인 필요)",
-      "apply": "울산스타트업허브 https://ulsanstartuphub.kr/ → 프로그램 신청 → 2026년 USF TOP 5 온라인 접수. 문의 052-230-3464·3411 / ye9688@ccei.kr·pjw0424@ccei.kr",
-      "official_url": "https://ccei.creativekorea.or.kr/ulsan/custom/notice_view.do?no=38888&div_code=&pn=1&kind=my&sPtime=now&sMenuType=&pagePerContents=8&cmntySeqNum=&menuSeqNum=&storyList=&sdate=&edate=&orderByVal=1&title=",
-      "id": "https://ccei.creativekorea.or.kr/ulsan/custom/notice_view.do?no=38888&div_code=&pn=1&kind=my&sPtime=now&sMenuType=&pagePerContents=8&cmntySeqNum=&menuSeqNum=&storyList=&sdate=&edate=&orderByVal=1&title=",
-      "priority": "높음",
-      "legal_note": "법인전환은 필수가 아닙니다. 공고문 일자는 2026년 9월 14일이며 공고일 기준 업력을 심사합니다. 괄호의 창업 하한일은 ‘2019년 9월 18일 이후’로 본문과 불일치하나 현재 사업자는 두 기준 모두 범위 내입니다. 공고일 이후 신설법인은 10월 7일 접수마감만 맞추면 된다고 단정할 수 없어 기준일 인정 여부를 확인해야 합니다. 법인 신청 시 법인사업자등록증·법인등기사항전부증명서가 필요하며 다수 사업자는 최초 등록사업자의 창업일로 판단합니다. 포괄양수도 법인전환의 창업자 지위승계 규정은 있지만 동일 대표·동종업종·개인사업자 폐업·권리의무 전부 양도 등 실제 요건을 확인해야 하고 업력·실적 자동승계를 가정하지 않습니다. 동일·유사 아이템의 타 경진대회 누적 상금 3천만원 이상 및 공고상 기수상자 제한을 확인하십시오. 여성기업확인서 보유는 전제하지 않습니다.",
-      "documents": "지정 참가신청서, 사업계획서, 개인정보 수집·이용 동의서, 중소기업 지원사업 통합관리시스템 정보활용 동의서, 참가서약서, 사업자등록증, 법인등기사항전부증명서(법인만). 기관추천서와 수상확인서 등은 해당 시 제출. 대표자 발표용 IR 자료 준비",
-      "deadline_iso": "2026-10-07",
-      "source": "기업마당 공식 상세페이지 및 첨부 모집공고 HWP 전체 확인, 울산창조경제혁신센터 수행기관 원문 접속 확인·우선 게시",
-      "updated_at": "2026-09-16T17:02:27+09:00"
-    },
     {
       "title": "2026년 디지털정부 해외진출 컨설턴트 2차 경력자 과정 — 온라인 선택 청강",
       "organization": "행정안전부·한국지능정보사회진흥원(NIA)",
@@ -188,86 +171,6 @@
       "deadline_iso": "",
       "source": "NIPA 공식 공지사항 2026-10-02 게시. 이번 실행에서 원문 HTTP 200 및 본문 신청방법·대상·영어 상담·조기 종료·문의처 확인",
       "updated_at": "2026-10-02T13:01:48+09:00"
-    },
-    {
-      "title": "2026년 목포벤처문화산업지원센터 3차 신규 입주기업 모집",
-      "organization": "jcia.or.kr",
-      "official_url": "https://jcia.or.kr/cf/Board/9885/detailView.do",
-      "id": "https://jcia.or.kr/cf/Board/9885/detailView.do",
-      "eligibility_timing": "조건부/확인 필요",
-      "priority": "조건부",
-      "fit": "목포 이전·거점 설립 의사 있을 때 조건부 검토 / 모집분야에 SW개발·정보시스템 구축운영·문화콘텐츠 명시. 역외기업의 본사 이전 및 지사 설립 가능 조건을 명시하므로 서울 소재만으로 제외하지 않음. / 공고 문구는 역외기업의 본사 이전 및 지사 설립 가능한 기업. 지사만으로 충족 가능한지 기관 확인 필요. 입주실 주소 이전은 원칙적으로 계약30일 이내, 역외는 시기 협의 가능. 무고용 배제 문구는 없으나 인력·고용창출 평가와 고용증빙 부담 있음. 개인사업자 법인등기 대체서류 확인 필요. 원격·마포 유지 선호와 충돌. 포털은 벤처2/문화1실로 요약하지만 원기관 PDF는 벤처동3실이므로 원기관을 우선.",
-      "benefits": "벤처동 3개실(38.3㎡/72.4㎡/76.5㎡), 최초3년 입주·1회 연장 가능, 공용시설 이용. / 시설보증금 120만/220만/230만원; 관리비부담금 139,000/264,000/279,000원(VAT 별도), 공공요금 월 별도 청구. 냉난방기·인터넷 필요시 개별 설치.",
-      "deadline": "2026-10-07T13:00:00+09:00",
-      "apply": "이전/지사 조건과 개인·무고용 대체증빙을 061-280-7492에 직접 확인. 접수는 9/28부터 10/7 13시까지 이메일 도착분, 접수 후 유선확인 필수.",
-      "documents": "입주신청서·사업계획서·동의서·국세/지방세 완납증명·대표자 주민등록등본·법인등기사항증명(개인사업 대체 확인)·사업자등록증명·재무자료·고용현황 등 PDF 한 파일.",
-      "legal_note": "",
-      "source": "SMES 28개 시스템 선별 검토 · 공식 원문",
-      "updated_at": "2026-09-23T09:16:27.919445+09:00",
-      "deadline_iso": "2026-10-07",
-      "official_aliases": [
-        "https://jcia.or.kr/cf/Board/9885/detailView.do"
-      ]
-    },
-    {
-      "title": "2026년 제8차 판교 퇴근길 밋업: AI와 웨어러블이 만드는 롱지비티",
-      "organization": "www.pangyotechnovalley.org",
-      "official_url": "https://www.pangyotechnovalley.org/base/business/read?businessNo=542&businessManagementNo=1&menuLevel=3&menuNo=10",
-      "id": "https://www.pangyotechnovalley.org/base/business/read?businessNo=542&businessManagementNo=1&menuLevel=3&menuNo=10",
-      "eligibility_timing": "조건부/확인 필요",
-      "priority": "조건부",
-      "fit": "검토 가치 / AI 서비스를 헬스케어로 확장할 경우 시장학습·네트워킹 기회 / 지원금 아님. 헬스케어 관심과 판교 현장 참석 필요; 현재 사업분야를 헬스케어로 가정하지 않음.",
-      "benefits": "10/7 18:50 경기 스타트업캠퍼스 강연, 60명 / 무료",
-      "deadline": "2026-10-07 (시간 미표기)",
-      "apply": "주제 관련성을 판단하고 원문에서 잔여석 확인.",
-      "documents": "['구글폼 사전등록; 증빙 미표기']",
-      "legal_note": "",
-      "source": "SMES 28개 시스템 선별 검토 · 공식 원문",
-      "updated_at": "2026-09-22T09:17:32.952826+09:00",
-      "deadline_iso": "2026-10-07",
-      "official_aliases": [
-        "https://www.pangyotechnovalley.org/base/business/read?businessManagementNo=1&businessNo=542&menuLevel=3&menuNo=10"
-      ]
-    },
-    {
-      "title": "[서울] 2026년 하반기 SBA 맞춤형 Kibo-Star밸리기업(해외진출연계) 지원계획",
-      "organization": "mplus.startup-plus.kr",
-      "official_url": "https://mplus.startup-plus.kr/project/PRJ007499",
-      "id": "https://mplus.startup-plus.kr/project/PRJ007499",
-      "eligibility_timing": "조건부/확인 필요",
-      "priority": "조건부",
-      "fit": "조건부 확인 / 서울 소재 2025년 개업 SW·AI 사업자로 창업3년 이내 단계와 AI/지식서비스 분야를 조건부 검토 가능. 개인기업이 신청서류에서 명시적으로 인정됨. / 9/8 과거게시 공고이나 오늘 처음 원문·첨부 심사 완료. prior group results 및 현재 Pages43건에 공고ID/기관원문/사업명 일치 없음; 과거 게시일만으로 억제하지 않음. / 개인기업 주주명부 제외 명시, 법인전환 필수 아님. SBA 추천·기보BB 기술평가·대상산업 해당 심사 및 창업기업확인서 필요. 무고용 사업장 고용보험 명부 대체서류 미확인. 기존 보증이용 시 본인자금 전액상환 조건 주의.",
-      "benefits": "창업3년 이내 Level1 사전한도 최대30억원·최초지원 최대3억원 한도 내 보증부대출 심사, 고정보증료0.7%, 보증비율100%, 기술평가료면제 및 해외진출 연계. / 보증료0.7%; 대출이자 별도 미확인. 평가료 면제.",
-      "deadline": "2026-10-07 15:00 KST",
-      "apply": "SBA 02-6958-9073에 무고용 개인기업 증빙과 대상산업 요건 사전문의. 신청서는 10/7 15시까지, 확인서 지연 특례만 10/14.",
-      "documents": "['기술사업계획서', '보증대출상환확약서(기존보증 이용 시)', '서면평가근거자료', '고용보험 사업장 자격취득자 명부(2026-08-31 기준)', '창업기업확인서(10/14 추가제출 허용)', '주주명부(개인기업 제외)', 'IR자료(선택)']",
-      "legal_note": "",
-      "source": "SMES 28개 시스템 선별 검토 · 공식 원문",
-      "updated_at": "2026-09-21T09:04:28.991275+09:00",
-      "deadline_iso": "2026-10-07",
-      "official_aliases": [
-        "https://mplus.startup-plus.kr/project/PRJ007499"
-      ]
-    },
-    {
-      "title": "[전국] 2026년 민간자율인공지능윤리위원회 표준지침 설명회 개최",
-      "organization": "www.kisdi.re.kr",
-      "official_url": "https://www.kisdi.re.kr/bbs/view.do?key=m2101113055944&bbsSn=115134",
-      "id": "https://www.kisdi.re.kr/bbs/view.do?key=m2101113055944&bbsSn=115134",
-      "eligibility_timing": "조건부/확인 필요",
-      "priority": "조건부",
-      "fit": "조건부 확인 / AI개발·기술교육 사업의 윤리/운영지침 이해에 적합 / 중소·스타트업 및 공공기관 관계자 대상. 지원금/위원 모집 아님.",
-      "benefits": "10월8일 14시 온라인 Zoom AI윤리위원회 표준지침 설명 및 질의응답 / 원문·첨부에 참가비 명시 없음",
-      "deadline": "2026-10-07 17:00 KST",
-      "apply": "원문의 안내를 보고 참석 준비; 제출은 사용자가 직접 진행.",
-      "documents": "참가신청 안내; 별도 증빙서류 명시 없음",
-      "legal_note": "",
-      "source": "SMES 28개 시스템 선별 검토 · 공식 원문",
-      "updated_at": "2026-10-03T09:31:20.098691+09:00",
-      "deadline_iso": "2026-10-07",
-      "official_aliases": [
-        "https://www.kisdi.re.kr/bbs/view.do?bbsSn=115134&key=m2101113055944"
-      ]
     },
     {
       "title": "2026 서초AICT 데모데이 참가기업 모집",
