@@ -53,7 +53,7 @@ h2 { font-size: 20px; line-height: 1.4; letter-spacing: -.035em; }
 .search-row label { display: block; margin-bottom: 5px; font-size: 11px; font-weight: 650; color: var(--muted); }
 input[type="search"], select { width: 100%; min-width: 0; border: 1px solid var(--line); border-radius: 5px; padding: 10px 12px; background: var(--surface); font-size: 14px; }
 input::placeholder { color: #69746c; }
-select { padding-right: 25px; }
+select { padding-right: 25px; appearance: none; -webkit-appearance: none; min-height: 44px; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 15px) 50%, calc(100% - 10px) 50%; background-size: 5px 5px; background-repeat: no-repeat; }
 .filter-bottom { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 7px; }
 .checkbox-control { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 12px; cursor: pointer; }
 input[type="checkbox"] { margin: 0; width: 17px; height: 17px; accent-color: var(--accent); }
