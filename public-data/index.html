@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="국내 공공데이터를 실제 활용하는 해커톤, 경진대회, 창업 프로그램의 공식 공고 검증 스냅샷입니다.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="color-scheme" content="light">
+  <title>공공데이터 기회 노트 · 해커톤, 경진대회, 창업</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./logic.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#opportunities">공고 목록으로 건너뛰기</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="wordmark" href="./" aria-label="공공데이터 기회 노트 처음으로"><span class="brand-mark" aria-hidden="true">D:</span><span>데이터로 만드는 다음 기회</span></a>
+      <span class="edition">PUBLIC DATA / OPPORTUNITIES</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow">공고 탐색 노트</p>
+          <h1 id="page-title">공공데이터 기회 노트</h1>
+          <p class="intro-lead">쓸 수 있는 데이터에서,<br class="desktop-break"> 도전할 만한 기회로.</p>
+          <p class="scope-rule">국내 공공데이터를 실제 활용하는 공고만. 일반 AI 공모·입찰·단순교육 제외</p>
+        </div>
+        <aside class="snapshot-note" aria-label="자료 성격과 확인 기준">
+          <span class="note-index" aria-hidden="true">NOTE / 01</span>
+          <p class="snapshot-heading">신청 전, 공식 원문을 한 번 더.</p>
+          <p>공식 공고 검증 스냅샷 · 자동 수집/실시간 갱신 아님</p>
+          <p id="snapshot-time" class="snapshot-time">자료 갱신 시각 확인 중</p>
+          <p class="small">전체 공고 망라·참가자격 보장 아님</p>
+        </aside>
+      </section>
+
+      <section id="opportunities" class="explore" aria-labelledby="explore-title" tabindex="-1">
+        <div class="section-heading">
+          <h2 id="explore-title">기회 둘러보기</h2>
+          <p id="total-count" class="total-count">전체 공고 확인 중</p>
+        </div>
+
+        <form id="filters" class="filters" role="search" aria-label="공고 검색과 필터">
+          <fieldset class="type-filter">
+            <legend class="sr-only">공고 유형</legend>
+            <div class="type-options">
+              <button type="button" class="type-button is-active" data-type="all" aria-pressed="true" disabled>전체</button>
+              <button type="button" class="type-button" data-type="hackathon" aria-pressed="false" disabled>해커톤</button>
+              <button type="button" class="type-button" data-type="competition" aria-pressed="false" disabled>경진대회</button>
+              <button type="button" class="type-button" data-type="startup" aria-pressed="false" disabled>창업 프로그램</button>
+            </div>
+          </fieldset>
+          <div class="search-row">
+            <div class="search-control">
+              <label for="search">키워드 검색</label>
+              <input id="search" type="search" placeholder="제목, 기관, 공공데이터 요건" autocomplete="off" disabled>
+            </div>
+            <div class="select-control">
+              <label for="status-filter">접수 상태</label>
+              <select id="status-filter" disabled>
+                <option value="all">전체 상태</option>
+                <option value="open">접수중</option>
+                <option value="unknown">확인필요</option>
+                <option value="closed">종료만 보기</option>
+              </select>
+            </div>
+            <div class="select-control">
+              <label for="sort">정렬</label>
+              <select id="sort" disabled>
+                <option value="deadline">마감일 가까운 순</option>
+                <option value="verified">최근 검증 순</option>
+                <option value="title">제목 순</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-bottom">
+            <label class="checkbox-control" for="include-closed"><input id="include-closed" type="checkbox" disabled><span>종료 공고 포함</span></label>
+            <button id="reset-filters" class="text-button" type="button" disabled>조건 초기화 <span aria-hidden="true">↺</span></button>
+          </div>
+        </form>
+
+        <div class="results-bar">
+          <p id="result-count" role="status" aria-live="polite" aria-atomic="true">공고를 불러오는 중입니다.</p>
+          <span class="timezone-note">일정 기준 KST · 한국시간</span>
+        </div>
+        <div id="feedback" class="feedback" role="status"><p id="feedback-title">공식 공고를 불러오고 있어요.</p><p id="feedback-detail">검증된 요약과 원문 링크를 준비합니다.</p><button id="retry" type="button" hidden>다시 불러오기</button></div>
+        <div id="opportunity-list" class="opportunity-list" aria-label="공고 목록" aria-busy="true"></div>
+        <p id="closed-hint" class="closed-hint" hidden></p>
+        <noscript><p class="feedback">공고 탐색에는 JavaScript가 필요합니다. JavaScript를 켜고 다시 열어 주세요.</p></noscript>
+      </section>
+
+      <section class="reading-guide" aria-labelledby="guide-title">
+        <h2 id="guide-title">이 노트를 읽는 방법</h2>
+        <div>
+          <p><strong>접수중</strong>은 최근 7일 이내 공식 원문 확인과 마감 정보를 함께 반영합니다. 조기 마감·일정 변경은 반영되지 않을 수 있습니다.</p>
+          <p>마감일 당일에 정확한 시각이 없거나 확인한 지 7일이 지나면 <strong>확인필요</strong>로 표시합니다. 마감 시각을 임의로 23:59로 정하지 않습니다.</p>
+          <p id="scope-note">수록 범위는 자료를 불러온 뒤 표시됩니다.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><p>공공데이터 기회 노트</p><p>발견은 여기서, 최종 확인은 공식 원문에서.</p></footer>
+  </div>
+</body>
+</html>
