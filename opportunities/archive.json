@@ -3625,6 +3625,23 @@
       "updated_at": "2026-11-24T09:03:56+09:00"
     },
     {
+      "title": "2027년 상생협력 실증 프로그램 사전 공고 — 기후·에너지·환경 AI 기술 등 컨소시엄 실증(컨소시엄당 최대 15억)",
+      "organization": "기후에너지환경부·한국환경공단(K-eco연구원 ESG기업지원부)",
+      "eligibility_timing": "조건부/확인 필요",
+      "fit": "공급기업(환경기술 권리 보유 중소·중견기업)+수요기관(실증장소 제공) 컨소시엄 대상. 지원분야에 '기후·에너지·환경 AI 기술'이 포함되어 환경 분야 AI 기술을 권리화한 경우 참여 검토 가능. 현재 신청자의 환경기술 권리 보유 근거가 확인되지 않아 조건부로만 유효. 2027년 본공고 전 사전공고(2026-11-27 게시 신규).",
+      "benefits": "수요기관 내 설비 제작·설치 자금 컨소시엄당 최대 15억원. 사전신청으로 본공고 전 참여 준비·매칭 기회.",
+      "deadline": "사전신청 2026-12-10(목) 18:00",
+      "apply": "이메일 접수 kecomicro@keco.or.kr (문의 032-590-4828, 4813, 4803)",
+      "official_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000128157",
+      "id": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000128157",
+      "priority": "조건부",
+      "legal_note": "공급기업 자격이 '신청과제 관련 환경기술 권리를 보유한 중소·중견기업'으로 한정 — 권리 미보유 시 공급기업 신청 불가. 컨소시엄 구성(수요기관 확보) 필수. 개인사업자의 중소기업 해당 여부·법인전환 후 요건은 본공고 원문에서 재검증 필요.",
+      "documents": "[덧붙임1] 공급기업 사전 신청서 및 기술 소개 자료 양식.hwpx (수요기관은 덧붙임2)",
+      "deadline_iso": "2026-12-10",
+      "source": "기업마당(bizinfo, 2026-11-27 게시) — 공고 본문 직접 확인",
+      "updated_at": "2026-11-28T09:04:04+09:00"
+    },
+    {
       "title": "KISA 침해사고 예방 취약점 점검 — 기업 홈페이지·IT자산 무료 진단",
       "organization": "과학기술정보통신부·한국인터넷진흥원",
       "eligibility_timing": "조건부/확인 필요",
@@ -3693,6 +3710,23 @@
       "deadline_iso": "2026-12-18",
       "source": "SMES 28개 시스템 선별 검토 · 공식 원문",
       "updated_at": "2026-10-24T09:16:02.660877+09:00"
+    },
+    {
+      "title": "Agentic AI Connect 2026 — 에이전틱 AI 콘퍼런스(27년 NIA·NIPA·IITP·TTA 사업계획 공유)",
+      "organization": "과학기술정보통신부·NIA·에이전틱AI얼라이언스(AAIA)",
+      "eligibility_timing": "현재 신청 가능",
+      "fit": "에이전틱 AI 전문 콘퍼런스. 대상은 '에이전틱 AI에 관심있는 누구나'로 참가 자격 제한 없음. 16:00~16:50 세션에서 NIA·NIPA·IITP·TTA가 2027년 에이전틱 AI 사업계획을 공유·토론 — 2027년 AX·AI 정부사업 공급참여 검토에 필요한 선(先)정보. 2026-11-27 게시 신규.",
+      "benefits": "무료 참가(12-18(금) 13:00~17:00, 서울 코엑스 마곡 르웨스트홀A). 특별강연(피클·OpenAI 아태정책총괄·LG AI연구원), 26년 성과 사례(카카오·솔트웨어·심심이), 27년 사업계획 공유 및 네트워킹, 경품 추첨.",
+      "deadline": "2026-12-18(금) 13:00 행사 시작까지 온라인 신청(별도 접수 마감 미고지, 기념품은 선착순)",
+      "apply": "신청폼 https://app.catchsecu.com/projects/68d00d9efc2d1f9/form 작성 — 접수 확인·안내 메일 발송",
+      "official_url": "https://www.nia.or.kr/site/nia_kor/ex/bbs/View.do?cbIdx=99835&bcIdx=30231&parentSeq=30231",
+      "id": "https://www.nia.or.kr/site/nia_kor/ex/bbs/View.do?cbIdx=99835&bcIdx=30231&parentSeq=30231",
+      "priority": "높음",
+      "legal_note": "참가 자격 제한 없음(누구나). 현장 촬영 안내가 있으며 노출 미동의 시 사무국 사전 연락. 문의: contact@aaia.kr / 02-3786-0314",
+      "documents": "신청폼 입력 항목(별도 첨부서류 없음)",
+      "deadline_iso": "2026-12-18",
+      "source": "NIA 공지사항(nia_notice, 2026-11-27 게시) — 공지 본문 및 신청폼 링크 직접 확인",
+      "updated_at": "2026-11-28T09:04:04+09:00"
     },
     {
       "title": "2027년도 외부전문가 인력풀 공개 모집 안내(정부위탁사업 및 컨설팅 용역 수행 등)",
